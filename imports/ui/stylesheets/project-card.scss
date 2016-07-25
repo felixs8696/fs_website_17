@@ -1,0 +1,11 @@
+.project-card-left {
+  height: 300px;
+  width: 400px;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-style: preserve-3d;
+  transform: translateX(33vw) translateY(0px) rotateX(45deg) rotateZ(45deg);
+  background: url("projects/hackin-preview.png");
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 10px 0 15px rgba(0,0,0,0.23);
+}
