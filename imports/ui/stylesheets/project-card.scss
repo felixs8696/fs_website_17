@@ -186,7 +186,7 @@ button:focus {
 /* Overlay */
 .grid::after {
   content: '';
-  background: rgba(202, 202, 202, 0.4);
+  background: white;
   opacity: 0;
   position: absolute;
   pointer-events: none;
@@ -194,8 +194,8 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .view-single .grid::after {
@@ -302,6 +302,7 @@ button:focus {
   color: inherit;
   background: #fff;
   min-height: 300px;
+  height: 50vh;
   cursor: pointer;
   text-align: center;
   display: -webkit-box;
@@ -579,8 +580,8 @@ button:focus {
 }
 
 .placeholder.placeholder--trans-in {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -633,6 +634,7 @@ button:focus {
   padding: 60px 60px 80px 60px;
   pointer-events: none;
   font-size: 0.85em;
+  background: white;
 }
 .content__item p {
   max-width: 1200px;
@@ -821,7 +823,7 @@ button:focus {
 
   .main {
     height: 100%;
-    margin-left: 300px;
+    margin-left: 40%;
   }
 
   .content__item {
@@ -899,7 +901,7 @@ button:focus {
 @media screen and (min-width: 1200px) {
   /* 3 columns */
   .grid__item {
-    width: 33.333%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1500px) {

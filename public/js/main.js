@@ -32,7 +32,6 @@
 			}
 		},
 		gridEl = document.getElementById('theGrid'),
-		sidebarEl = document.getElementById('theSidebar'),
 		gridItemsContainer = gridEl.querySelector('section.grid'),
 		contentItemsContainer = gridEl.querySelector('section.content'),
 		gridItems = gridItemsContainer.querySelectorAll('.grid__item'),
@@ -41,8 +40,7 @@
 		current = -1,
 		lockScroll = false, xscroll, yscroll,
 		isAnimating = false,
-		menuCtrl = document.getElementById('menu-toggle'),
-		menuCloseCtrl = sidebarEl.querySelector('.close-button');
+		menuCtrl = document.getElementById('menu-toggle')
 
 	/**
 	 * gets the viewport width and height
@@ -106,19 +104,6 @@
 				}
 			}
 		} );
-
-		// hamburger menu button (mobile) and close cross
-		menuCtrl.addEventListener('click', function() {
-			if( !classie.has(sidebarEl, 'sidebar--open') ) {
-				classie.add(sidebarEl, 'sidebar--open');
-			}
-		});
-
-		menuCloseCtrl.addEventListener('click', function() {
-			if( classie.has(sidebarEl, 'sidebar--open') ) {
-				classie.remove(sidebarEl, 'sidebar--open');
-			}
-		});
 	}
 
 	function loadContent(item) {
@@ -151,8 +136,10 @@
 			// add transition class
 			classie.remove(dummy, 'placeholder--trans-in');
 			classie.add(dummy, 'placeholder--trans-out');
-			// position the content container
-			contentItemsContainer.style.top = scrollY() + 'px';
+			// // position the content container
+			// contentItemsContainer.style.top = '0px';
+			// // set white background for container
+			// contentItemsContainer.style.background = 'white';
 			// show the main content container
 			classie.add(contentItemsContainer, 'content--show');
 			// show content item:
@@ -185,7 +172,9 @@
 			onEndTransition(dummy, function() {
 				// reset content scroll..
 				contentItem.parentNode.scrollTop = 0;
-				gridItemsContainer.removeChild(dummy);
+				// console.log(dummy.parentNode);
+				// dummy.parentNode.removeChild(dummy);
+				dummy.remove();
 				classie.remove(gridItem, 'grid__item--loading');
 				classie.remove(gridItem, 'grid__item--animate');
 				lockScroll = false;

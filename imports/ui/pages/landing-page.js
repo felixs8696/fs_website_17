@@ -7,6 +7,19 @@ Template.Landing_page.onCreated(function landingPageOnCreated() {
 
 });
 
+Template.Landing_page.onRendered(function () {
+  $.when(
+    $.getScript( "js/modernizr.custom.js" ),
+    $.getScript( "js/classie.js" ),
+    $.getScript( "js/main.js" ),
+    $.Deferred(function( deferred ){
+        $( deferred.resolve );
+    })
+  ).done(function(){
+
+  });
+});
+
 Template.Landing_page.helpers({
 
 });
@@ -27,7 +40,7 @@ Template.Landing_page.events({
   'click #500px-link': function() {
     window.open("https://500px.com/felixsu");
   },
-  
+
   'click #youtube-link': function() {
     window.open("https://www.youtube.com/user/felixs8696/");
   },
