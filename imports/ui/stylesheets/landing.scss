@@ -1,6 +1,6 @@
 .logo {
-  z-index: 1;
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   top: 1em;
   left: 1em;
   width: 4em;
@@ -149,4 +149,7 @@
 }
 .icon-row-offset {
   margin-left: 0.8em;
+}
+.project_1_back {
+  background: linear-gradient(90deg, #58A8FB, #465683);
 }
