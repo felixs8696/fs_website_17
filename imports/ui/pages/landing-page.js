@@ -12,5 +12,31 @@ Template.Landing_page.helpers({
 });
 
 Template.Landing_page.events({
+  'click #facebook-link': function() {
+    window.open("https://facebook.com/felix.su.37");
+  },
+
+  'click #linkedin-link': function() {
+    window.open("https://www.linkedin.com/in/felixsu");
+  },
+
+  'click #github-link': function() {
+    window.open("https://github.com/felixs8696");
+  },
+
+  'click #500px-link': function() {
+    window.open("https://500px.com/felixsu");
+  },
   
+  'click #youtube-link': function() {
+    window.open("https://www.youtube.com/user/felixs8696/");
+  },
+
+  'click #soundcloud-link': function() {
+    window.open("https://soundcloud.com/felix-su");
+  },
+
+  'click #instagram-link': function() {
+    window.open("https://www.instagram.com/felixs8696/");
+  },
 });
