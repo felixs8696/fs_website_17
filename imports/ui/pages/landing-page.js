@@ -1,6 +1,11 @@
 import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
+import '../components/hacker-panel.js';
+import '../components/photographer-panel.js';
+import '../components/musician-panel.js';
+import '../components/bookworm-panel.js';
+
 import './landing-page.html';
 
 var facetDetails = {
@@ -21,7 +26,7 @@ var facetDetails = {
   },
   bookworm: {
     title: 'Bookworm',
-    desc: "What I love more than studying is helping others have a smoother journey than I have. Once I have put in the work to achieve a milestone I love to share and teach others how to do the same.",
+    desc: "What I love more than studying is helping others have a smoother journey than I've had. After I put in the work to achieve a milestone I love to share my knowledge and resources with those aspiring to achieve the same goals.",
     image: '/facets/bookworm.png'
   }
 };
@@ -30,6 +35,7 @@ var facetNames = Object.keys(facetDetails);
 function initFacets() {
   Session.set('currentPage', 'hacker');
   Session.set('facetContent', facetDetails['hacker']);
+  Session.set('facetTemplate', 'Hacker_panel');
 }
 
 function initDisplay() {
@@ -63,19 +69,15 @@ Template.Landing_page.onRendered(function () {
       $('.title-container').removeClass('animated fadeInRight');
       $('.title-container').addClass('animated fadeOutRight');
     }
-    if($(this).scrollTop() < $('.project_1_back').position().top - 200){
+    if($(this).scrollTop() < $('.project_1_back').position().top - 500){
       $('#project-header-content').removeClass('animated fadeInLeft');
       $('#project-header-content').addClass('animated fadeOutLeft');
     }
-    if($(this).scrollTop() >= $('.project_1_back').position().top - 200){
+    if($(this).scrollTop() >= $('.project_1_back').position().top - 500){
       $('#project-header-content').css({ display : 'block' });
       $('#project-header-content').removeClass('animated fadeOutLeft');
       $('#project-header-content').addClass('animated fadeInLeft');
     }
-    // if($(this).scrollTop() >= $('.project_1_back').position().top){
-      // $('#theGrid').removeClass('animated fadeOutLeft');
-      // $('#theGrid').addClass('animated fadeOutRight');
-    // }
 
   });
 });
@@ -83,6 +85,10 @@ Template.Landing_page.onRendered(function () {
 Template.Landing_page.helpers({
   getFacetContentVal: function(val) {
     return Session.get('facetContent')[val];
+  },
+
+  getFacetTemplate: function() {
+    return Session.get('facetTemplate');
   }
 });
 
