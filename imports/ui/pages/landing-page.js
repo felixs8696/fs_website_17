@@ -18,6 +18,25 @@ Template.Landing_page.onRendered(function () {
   ).done(function(){
 
   });
+
+  $(document).on('scroll', function() {
+    if($(this).scrollTop() < $('.parallax-content').position().top + 200){
+      $('.title-container').removeClass('animated fadeOutRight');
+      $('.title-container').addClass('animated fadeInRight');
+    }
+    if($(this).scrollTop() >= $('.parallax-content').position().top + 200){
+      $('.title-container').removeClass('animated fadeInRight');
+      $('.title-container').addClass('animated fadeOutRight');
+    }
+    if($(this).scrollTop() < $('.project_1_back').position().top - 200){
+      $('.project-header').removeClass('animated fadeInLeft');
+      $('.project-header').addClass('animated fadeOutLeft');
+    }
+    if($(this).scrollTop() >= $('.project_1_back').position().top - 200){
+      $('.project-header').removeClass('animated fadeOutLeft');
+      $('.project-header').addClass('animated fadeInLeft');
+    }
+  });
 });
 
 Template.Landing_page.helpers({
