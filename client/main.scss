@@ -1,5 +1,7 @@
 /* Declare global SCSS properties here. */
 $dark-neutral-blue: #103849;
+$guitar-beige: #EBDAC0;
+$berkeley-blue: #416289;
 $flat-blue-1: #3498DB;
 
 /* Import SCSS files here. */
@@ -11,3 +13,7 @@ $flat-blue-1: #3498DB;
 @import '../imports/ui/stylesheets/parallax.scss';
 @import '../imports/ui/stylesheets/landing.scss';
 @import '../imports/ui/stylesheets/project-card.scss';
+@import '../imports/ui/stylesheets/panel.scss';
+@import '../imports/ui/stylesheets/photographer.scss';
+@import '../imports/ui/stylesheets/musician.scss';
+@import '../imports/ui/stylesheets/bookworm.scss';
