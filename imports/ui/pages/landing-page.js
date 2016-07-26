@@ -47,6 +47,11 @@ function initDisplay() {
   $('#prev-button').css({ display : 'none' });
 }
 
+function removeAddClass(selector, removeClass, addClass) {
+  $(selector).removeClass(removeClass);
+  $(selector).addClass(addClass);
+}
+
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
 });
@@ -137,14 +142,15 @@ Template.Landing_page.events({
     if (idx < facetNames.length - 1) {
       var nextPage = facetNames[idx + 1];
       var nextPageContents = facetDetails[nextPage];
-      $('#project-header-content').removeClass('animated fadeInLeft');
-      $('#project-header-content').addClass('animated fadeOutLeft');
+      removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft')
+      removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
       setTimeout(function() {
         Session.set('currentPage', nextPage);
         Session.set('facetContent', nextPageContents);
+        Session.set('facetTemplate', nextPageContents.template);
         setTimeout(() => {
-          $('#project-header-content').removeClass('animated fadeOutLeft');
-          $('#project-header-content').addClass('animated fadeInLeft');
+          removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft')
+          removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
         }, 300);
       }, 750);
     }
@@ -160,14 +166,15 @@ Template.Landing_page.events({
     if (idx > 0) {
       var prevPage = facetNames[idx - 1];
       var prevPageContents = facetDetails[prevPage];
-      $('#project-header-content').removeClass('animated fadeInLeft');
-      $('#project-header-content').addClass('animated fadeOutLeft');
+      removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
+      removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
       setTimeout(function() {
         Session.set('currentPage', prevPage);
         Session.set('facetContent', prevPageContents);
+        Session.set('facetTemplate', prevPageContents.template);
         setTimeout(() => {
-          $('#project-header-content').removeClass('animated fadeOutLeft');
-          $('#project-header-content').addClass('animated fadeInLeft');
+          removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
+          removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
         }, 300);
       }, 750);
     }
