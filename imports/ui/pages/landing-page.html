@@ -71,9 +71,21 @@
   </section>
   <section class="project_1_back">
     <div class="project-header">
-      <div class="project-header-title">Hacker</div>
-      <div class="project-header-subtitle">I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures.<br><br>Click on them to read about their stories.</div>
-      <img class="project-img" src="/facets/coder.png"/>
+      <div id="project-header-content">
+        <div class="project-header-title">{{getFacetContentVal 'title'}}</div>
+        <div class="project-header-subtitle">{{getFacetContentVal 'desc'}}</div>
+        <div class="project-img-container">
+          <img class="project-img" src="{{getFacetContentVal 'image'}}"/>
+        </div>
+      </div>
+      <div class="nav-arrows">
+        <div class="left-arrow-container">
+          <button id="prev-button">&lt; Prev</button>
+        </div>
+        <div class="right-arrow-container">
+          <button id="next-button">Next &gt;</button>
+        </div>
+      </div>
     </div>
 		<div id="theGrid" class="main">
 			<section class="grid">

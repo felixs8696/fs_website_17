@@ -148,6 +148,7 @@
   top: 6em;
   left: 3em;
   width: calc(40% - 6em);
+  height: calc(100vh - 12em);
 }
 .project-header-title {
   color: black;
@@ -161,8 +162,28 @@
   font-size: 1em;
   font-weight: 400;
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  text-align: justify;
+}
+.project-img-container {
+  width: 100%;
+  position: relative;;
 }
 .project-img {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5em;
+}
+.nav-arrows {
   width: 100%;
-  margin-top: 8em;
+  // margin-top: 4em;
+  position: absolute;
+  bottom: 1em;
+}
+.left-arrow-container {
+  float: left;
+}
+.right-arrow-container {
+  float: right;
 }
