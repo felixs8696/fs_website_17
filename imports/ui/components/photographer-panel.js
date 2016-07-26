@@ -8,6 +8,7 @@ Template.Photographer_panel.onCreated(function photographerPanelOnCreated() {
 });
 
 Template.Photographer_panel.onRendered(function() {
+  $('.zoom-gallery').css({ opacity : 0 });
   $('.zoom-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -30,8 +31,11 @@ Template.Photographer_panel.onRendered(function() {
 				return element.find('img');
 			}
 		}
-
 	});
+  setTimeout(() => {
+    $('.zoom-gallery').addClass('animated bounceInUp');
+    $('.zoom-gallery').css({ opacity : 1 });
+  }, 800);
 });
 
 Template.Photographer_panel.helpers({
