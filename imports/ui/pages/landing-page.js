@@ -3,19 +3,29 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import './landing-page.html';
 
-var facetNames = ['hacker', 'photographer'];
 var facetDetails = {
   hacker: {
     title: 'Hacker',
-    desc: 'I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures.\n\nClick on them to read about their stories.',
+    desc: 'I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures. Click on them to read about their stories.',
     image: '/facets/coder.png'
   },
   photographer: {
     title: 'Photographer',
     desc: "Photography gives me a chance to express the world from my point of view. You can learn a lot about each photographer's emotion and personality from the shots they take and the angles they choose.",
     image: '/facets/photo_video.png'
+  },
+  musician: {
+    title: 'Musician',
+    desc: "Although I'm not the world's best singer or guitarist, I use music to express emotions that I don't like to bottle up. I believe music is a language all people can understand and the unity it brings is something the world could always use a little more of.",
+    image: '/facets/musician.png'
+  },
+  bookworm: {
+    title: 'Bookworm',
+    desc: "What I love more than studying is helping others have a smoother journey than I have. Once I have put in the work to achieve a milestone I love to share and teach others how to do the same.",
+    image: '/facets/bookworm.png'
   }
 };
+var facetNames = Object.keys(facetDetails);
 
 function initFacets() {
   Session.set('currentPage', 'hacker');
