@@ -10,21 +10,25 @@ import './landing-page.html';
 
 var facetDetails = {
   hacker: {
+    template: "Hacker_panel",
     title: 'Hacker',
     desc: 'I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures. Click on them to read about their stories.',
     image: '/facets/coder.png'
   },
   photographer: {
+    template: "Photographer_panel",
     title: 'Photographer',
     desc: "Photography gives me a chance to express the world from my point of view. You can learn a lot about each photographer's emotion and personality from the shots they take and the angles they choose.",
     image: '/facets/photo_video.png'
   },
   musician: {
+    template: "Musician_panel",
     title: 'Musician',
     desc: "Although I'm not the world's best singer or guitarist, I use music to express emotions that I don't like to bottle up. I believe music is a language all people can understand and the unity it brings is something the world could always use a little more of.",
     image: '/facets/musician.png'
   },
   bookworm: {
+    template: "Bookworm_panel",
     title: 'Bookworm',
     desc: "What I love more than studying is helping others have a smoother journey than I've had. After I put in the work to achieve a milestone I love to share my knowledge and resources with those aspiring to achieve the same goals.",
     image: '/facets/bookworm.png'
@@ -61,6 +65,12 @@ Template.Landing_page.onRendered(function () {
   });
 
   $(document).on('scroll', function() {
+    if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){
+      $('.jumbotron').css({ display: 'block' });
+    }
+    if($(this).scrollTop() >= $('.parallax-about-section').position().top){
+      $('.jumbotron').css({ display: 'none' });
+    }
     if($(this).scrollTop() < $('.parallax-content').position().top + 200){
       $('.title-container').removeClass('animated fadeOutRight');
       $('.title-container').addClass('animated fadeInRight');
@@ -125,11 +135,13 @@ Template.Landing_page.events({
     var currPage = Session.get('currentPage');
     var idx = facetNames.indexOf(currPage);
     if (idx < facetNames.length - 1) {
+      var nextPage = facetNames[idx + 1];
+      var nextPageContents = facetDetails[nextPage];
       $('#project-header-content').removeClass('animated fadeInLeft');
       $('#project-header-content').addClass('animated fadeOutLeft');
       setTimeout(function() {
-        Session.set('currentPage', facetNames[idx + 1]);
-        Session.set('facetContent', facetDetails[Session.get('currentPage')]);
+        Session.set('currentPage', nextPage);
+        Session.set('facetContent', nextPageContents);
         setTimeout(() => {
           $('#project-header-content').removeClass('animated fadeOutLeft');
           $('#project-header-content').addClass('animated fadeInLeft');
@@ -146,11 +158,13 @@ Template.Landing_page.events({
     var currPage = Session.get('currentPage');
     var idx = facetNames.indexOf(currPage);
     if (idx > 0) {
+      var prevPage = facetNames[idx - 1];
+      var prevPageContents = facetDetails[prevPage];
       $('#project-header-content').removeClass('animated fadeInLeft');
       $('#project-header-content').addClass('animated fadeOutLeft');
       setTimeout(function() {
-        Session.set('currentPage', facetNames[idx - 1]);
-        Session.set('facetContent', facetDetails[Session.get('currentPage')]);
+        Session.set('currentPage', prevPage);
+        Session.set('facetContent', prevPageContents);
         setTimeout(() => {
           $('#project-header-content').removeClass('animated fadeOutLeft');
           $('#project-header-content').addClass('animated fadeInLeft');
