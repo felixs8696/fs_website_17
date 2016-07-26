@@ -143,3 +143,26 @@
 .icon-row-offset {
   margin-left: 0.8em;
 }
+.project-header {
+  position: absolute;
+  top: 6em;
+  left: 3em;
+  width: calc(40% - 6em);
+}
+.project-header-title {
+  color: black;
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+}
+.project-header-subtitle {
+  color: light-gray;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+}
+.project-img {
+  width: 100%;
+  margin-top: 8em;
+}

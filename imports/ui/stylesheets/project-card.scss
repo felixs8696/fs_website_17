@@ -125,8 +125,12 @@ button:focus {
 .grid-title {
   margin: 0;
   font-size: 1.875em;
-  font-family: "Playfair Display", serif;
+  font-family: "Raleway", serif;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .2rem;
+  margin-bottom: 10px;
 }
 
 .title--preview {
@@ -139,6 +143,15 @@ button:focus {
   -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
+}
+
+.grid-preview-img {
+  width: 75%;
+  display: block;
+}
+
+.grid-row {
+  margin-top: 1em;
 }
 
 .loader {
@@ -180,6 +193,7 @@ button:focus {
   font-family: "Playfair Display", serif;
   text-align: center;
   display: block;
+  margin-bottom: 1em;
 }
 
 .title--preview,
@@ -468,11 +482,11 @@ button:focus {
 .meta--full .meta__author {
   display: block;
   text-align: center;
-  font-weight: bold;
+  // font-weight: bold;
   margin-bottom: 20px;
 }
 .meta--full .meta__author::before {
-  content: 'by ';
+  // content: 'by ';
   font-weight: normal;
 }
 .meta--full .meta__category {
