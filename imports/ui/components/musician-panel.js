@@ -4,7 +4,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import "./musician-panel.html";
 
 function getSoundCloud(id) {
-  return "<iframe class='animated fadeInRight' width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + id + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>";
+  return "<div class='animated fadeInRight'><iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + id + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>";
 }
 
 Template.Musician_panel.onCreated(function musicianPanelOnCreated() {
@@ -12,7 +12,6 @@ Template.Musician_panel.onCreated(function musicianPanelOnCreated() {
 });
 
 Template.Musician_panel.onRendered(function() {
-  $('.musician-content').css({ opacity : 0 });
   setTimeout(() => {
     $('.musician-content').addClass('animated fadeInUp');
     $('.musician-content').css({ opacity : 1 });

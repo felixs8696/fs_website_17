@@ -4,7 +4,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import "./bookworm-panel.html";
 
 function getGitHub(repo) {
-  return "<div class='animated fadeInUp'><div class='github-card' data-github='felixs8696/" + repo + "' data-width='100%' data-theme='default'></div></div>";
+  return "<div class='animated fadeInUp'><div class='github-card' target='_blank' data-github='felixs8696/" + repo + "' data-width='100%' data-theme='default'></div></div>";
 }
 
 Template.Bookworm_panel.onCreated(function bookwormPanelOnCreated() {
