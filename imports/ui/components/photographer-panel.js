@@ -33,7 +33,7 @@ Template.Photographer_panel.onRendered(function() {
 		}
 	});
   setTimeout(() => {
-    $('.zoom-gallery').addClass('animated bounceInUp');
+    $('.zoom-gallery').addClass('animated fadeInUp');
     $('.zoom-gallery').css({ opacity : 1 });
   }, 800);
 });

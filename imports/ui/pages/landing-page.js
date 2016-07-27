@@ -52,8 +52,17 @@ function removeAddClass(selector, removeClass, addClass) {
   $(selector).addClass(addClass);
 }
 
+function clearSCSessions() {
+  Object.keys(Session.keys).forEach((key) => {
+    if (key.includes("soundcloud:")) {
+      Session.set(key, undefined);
+    }
+  })
+}
+
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
+  Session.set('soundCloudIds', [203035281, 174901963, 125970630, 257069781]);
 });
 
 Template.Landing_page.onRendered(function () {
@@ -149,6 +158,7 @@ Template.Landing_page.events({
         Session.set('facetContent', nextPageContents);
         Session.set('facetTemplate', nextPageContents.template);
         setTimeout(() => {
+          clearSCSessions();
           removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft')
           removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
         }, 300);
@@ -173,6 +183,7 @@ Template.Landing_page.events({
         Session.set('facetContent', prevPageContents);
         Session.set('facetTemplate', prevPageContents.template);
         setTimeout(() => {
+          clearSCSessions();
           removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
           removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
         }, 300);
