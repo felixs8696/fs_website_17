@@ -1,3 +1,17 @@
 .bookworm-background {
   background: $berkeley-blue;
 }
+.resource-card {
+  background: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.resource-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.resource-desc {
+  font-size: 1.2rem;
+  font-weight: 300;
+}

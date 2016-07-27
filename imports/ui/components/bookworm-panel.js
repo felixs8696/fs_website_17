@@ -8,7 +8,7 @@ Template.Bookworm_panel.onCreated(function bookwormPanelOnCreated() {
 });
 
 Template.Bookworm_panel.onRendered(function() {
-
+  $.getScript('//cdn.jsdelivr.net/github-cards/latest/widget.js');
 });
 
 Template.Bookworm_panel.helpers({

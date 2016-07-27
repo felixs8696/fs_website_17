@@ -15,6 +15,12 @@ var facetDetails = {
     desc: 'I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures. Click on them to read about their stories.',
     image: '/facets/coder.png'
   },
+  bookworm: {
+    template: "Bookworm_panel",
+    title: 'Bookworm',
+    desc: "What I love more than studying is helping others have a smoother journey than I've had. After I put in the work to achieve a milestone I love to share my knowledge and resources with those aspiring to achieve the same goals.",
+    image: '/facets/bookworm.png'
+  },
   photographer: {
     template: "Photographer_panel",
     title: 'Photographer',
@@ -26,12 +32,6 @@ var facetDetails = {
     title: 'Musician',
     desc: "Although I'm not the world's best singer or guitarist, I use music to express emotions that I don't like to bottle up. I believe music is a language all people can understand and the unity it brings is something the world could always use a little more of.",
     image: '/facets/musician.png'
-  },
-  bookworm: {
-    template: "Bookworm_panel",
-    title: 'Bookworm',
-    desc: "What I love more than studying is helping others have a smoother journey than I've had. After I put in the work to achieve a milestone I love to share my knowledge and resources with those aspiring to achieve the same goals.",
-    image: '/facets/bookworm.png'
   }
 };
 var facetNames = Object.keys(facetDetails);
