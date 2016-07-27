@@ -63,20 +63,11 @@ function clearSCSessions() {
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
   Session.set('soundCloudIds', [203035281, 174901963, 125970630, 257069781]);
+  Session.set('gitHubRepos', ['cs70-study-materials', 'ee16a-study-materials', 'stat133-studymaterials', 'meteor-ngIonic-sidemenu']);
 });
 
 Template.Landing_page.onRendered(function () {
   initDisplay();
-  $.when(
-    $.getScript( "js/modernizr.custom.js" ),
-    $.getScript( "js/classie.js" ),
-    $.getScript( "js/main.js" ),
-    $.Deferred(function( deferred ){
-        $( deferred.resolve );
-    })
-  ).done(function(){
-
-  });
 
   $(document).on('scroll', function() {
     if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){

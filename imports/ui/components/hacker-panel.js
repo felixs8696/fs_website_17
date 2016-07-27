@@ -8,7 +8,16 @@ Template.Hacker_panel.onCreated(function hackerPanelOnCreated() {
 });
 
 Template.Hacker_panel.onRendered(function() {
+  $.when(
+    $.getScript( "js/modernizr.custom.js" ),
+    $.getScript( "js/classie.js" ),
+    $.getScript( "js/main.js" ),
+    $.Deferred(function( deferred ){
+        $( deferred.resolve );
+    })
+  ).done(function(){
 
+  });
 });
 
 Template.Hacker_panel.helpers({

@@ -1,31 +1,33 @@
 <template name="Musician_panel">
   <div class="panel-background musician-background">
-    <div class="youtube-gallery">
-      <div class="row gallery-row">
-        <div class="six columns">
-          <a href="https://www.youtube.com/watch?v=MDYTvto1AsE" title="Love Yourself - Justin Bieber Cover | Felix Su, Yen Lee, Canishka De Silva">
-        		<img src="./youtube/loveyourself.png" width="100%">
-        	</a>
+    <div class="musician-content" style="opacity : 0;">
+      <div class="youtube-gallery">
+        <div class="row gallery-row">
+          <div class="six columns">
+            <a href="https://www.youtube.com/watch?v=MDYTvto1AsE" title="Love Yourself - Justin Bieber Cover | Felix Su, Yen Lee, Canishka De Silva">
+          		<img src="./youtube/loveyourself.png" width="100%">
+          	</a>
+          </div>
+          <div class="six columns">
+            <a href="https://www.youtube.com/watch?v=iMGs5_LZY1o" title="Let it Go - James Bay Cover (Dedicated to Nick Leslie, Rickard Kruusberg, and Misha Baselvvskyy)">
+        		  <img src="./youtube/letitgo.png" width="100%">
+          	</a>
+          </div>
         </div>
-        <div class="six columns">
-          <a href="https://www.youtube.com/watch?v=iMGs5_LZY1o" title="Let it Go - James Bay Cover (Dedicated to Nick Leslie, Rickard Kruusberg, and Misha Baselvvskyy)">
-      		  <img src="./youtube/letitgo.png" width="100%">
-        	</a>
+      </div>
+      <div class="soundcloud-gallery">
+        <div class="row gallery-row">
+          {{{getSoundCloudHTML 203035281}}}
         </div>
-      </div>
-    </div>
-    <div class="soundcloud-gallery">
-      <div class="row gallery-row">
-        {{{getSoundCloudHTML 203035281}}}
-      </div>
-      <div class="row gallery-row">
-        {{{getSoundCloudHTML 174901963}}}
-      </div>
-      <div class="row gallery-row">
-        {{{getSoundCloudHTML 125970630}}}
-      </div>
-      <div class="row gallery-row">
-        {{{getSoundCloudHTML 257069781}}}
+        <div class="row gallery-row">
+          {{{getSoundCloudHTML 174901963}}}
+        </div>
+        <div class="row gallery-row">
+          {{{getSoundCloudHTML 125970630}}}
+        </div>
+        <div class="row gallery-row">
+          {{{getSoundCloudHTML 257069781}}}
+        </div>
       </div>
     </div>
   </div>
