@@ -6,6 +6,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
 }
 .resource-title {
   font-size: 1.4rem;
@@ -14,4 +15,29 @@
 .resource-desc {
   font-size: 1.2rem;
   font-weight: 300;
+}
+.resource-card hr {
+  margin: 5px 0;
+}
+.resource-card .github-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.resource-card .avatar {
+  float: left;
+  height: 3em;
+  width: 3em;
+  padding: 5px;
+}
+
+.resource-card .avatar .image {
+  background: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
