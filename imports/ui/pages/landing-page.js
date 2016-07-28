@@ -90,7 +90,7 @@ function clearLoadedSessions() {
 
 function initSessionVars() {
   Session.set('gitHubContent', gitHubContent);
-  Session.set('SCPlaylistId', 196417224);
+  Session.set('SCPlaylistIds', [245460937, 245470427]);
 }
 
 Template.Landing_page.onCreated(function landingPageOnCreated() {

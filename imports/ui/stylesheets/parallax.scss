@@ -4,8 +4,10 @@
   height: 100vh;
   overflow: hidden;
   display: block;
-  -webkit-transform:translate3d(0,0,0);
-  transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 .parallax-content {
   position: absolute;
@@ -21,8 +23,10 @@
   height: 100vh;
   z-index: 2;
   background: white;
-  -webkit-transform:translate3d(0,0,0);
-  transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 .project_1_back {
   position: absolute;
@@ -34,6 +38,8 @@
   background: -moz-radial-gradient(top left at 2em 2em, white 0%, #E0E0E0 72%);
   background: radial-gradient(ellipse farthest-corner at 2em 4em, white 0%,#E0E0E0 72%);
   overflow: hidden;
-  -webkit-transform:translate3d(0,0,0);
-  transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
