@@ -34,6 +34,34 @@ var facetDetails = {
     image: '/facets/musician.png'
   }
 };
+
+var gitHubContent = {
+  cs70: {
+    title: 'cs70-study-materials',
+    desc: 'CS 70 Study Materials',
+    lang: "TeX",
+    url: "https://github.com/felixs8696/cs70-study-materials"
+  },
+  ee16a: {
+    title: 'ee16a-study-materials',
+    desc: "UC Berkeley's EE16A Notes and Resources",
+    lang: "TeX",
+    url: "https://github.com/felixs8696/ee16a-study-materials"
+  },
+  stat133: {
+    title: 'stat133-studymaterials',
+    desc: "UC Berkeley's STAT133 Notes and Resources",
+    lang: "HTML",
+    url: "https://github.com/felixs8696/stat133-studymaterials"
+  },
+  meteor: {
+    title: 'meteor-ngIonic-sidemenu',
+    desc: 'Starter Template for Meteor-Angular-Ionic',
+    lang: "JavaScript",
+    url: "https://github.com/felixs8696/meteor-ngIonic-sidemenu"
+  }
+}
+
 var facetNames = Object.keys(facetDetails);
 
 function initFacets() {
@@ -60,9 +88,14 @@ function clearLoadedSessions() {
   })
 }
 
+function initSessionVars() {
+  Session.set('gitHubContent', gitHubContent);
+  Session.set('SCPlaylistId', 196417224);
+}
+
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
-  Session.set('SCPlaylistId', 196417224);
+  initSessionVars();
 });
 
 Template.Landing_page.onRendered(function () {
@@ -151,8 +184,8 @@ Template.Landing_page.events({
           clearLoadedSessions();
           removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft')
           removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
-        }, 300);
-      }, 750);
+        }, 400);
+      }, 800);
     }
     if (idx == 0) $('#prev-button').css({ display : 'block' });
     if (idx + 1 >= facetNames.length - 1) {

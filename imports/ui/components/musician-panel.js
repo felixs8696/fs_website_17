@@ -15,7 +15,7 @@ Template.Musician_panel.onRendered(function() {
   setTimeout(() => {
     $('.youtube-gallery').addClass('animated fadeInUp');
     $('.youtube-gallery').css({ opacity : 1 });
-  }, 1000);
+  }, 1300);
   $('.youtube-gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
         delegate: 'a', // the selector for gallery item
@@ -46,7 +46,7 @@ Template.Musician_panel.onRendered(function() {
       $('#sc-playlist').addClass('animated fadeInUp');
       $('#sc-playlist').css({ opacity : 1 });
     }, 1000);
-  }, 1500);
+  }, 1800);
 
 });
 
