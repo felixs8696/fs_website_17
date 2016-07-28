@@ -62,7 +62,7 @@ function clearLoadedSessions() {
 
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
-  Session.set('soundCloudIds', [203035281, 174901963, 125970630, 257069781]);
+  Session.set('SCPlaylistId', 196417224);
 });
 
 Template.Landing_page.onRendered(function () {

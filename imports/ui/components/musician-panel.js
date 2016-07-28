@@ -3,8 +3,8 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import "./musician-panel.html";
 
-function getSoundCloud(id) {
-  return "<div class='animated fadeInRight'><iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + id + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>";
+function getSoundCloud(playlistId) {
+  return "<div id='sc-playlist' style='opacity: 0;'><iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + playlistId + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>";
 }
 
 Template.Musician_panel.onCreated(function musicianPanelOnCreated() {
@@ -39,21 +39,20 @@ Template.Musician_panel.onRendered(function() {
        }
     });
   });
-  var soundCloudIds = Session.get('soundCloudIds');
+  var SCPlaylistId = Session.get('SCPlaylistId');
   setTimeout(() => {
-    var i = 0;
-    var timer = setInterval(() => {
-      var id = soundCloudIds[i];
-      Session.set('soundcloud:' + id, getSoundCloud(id));
-      i++;
-      if(i === soundCloudIds.length) clearInterval(timer);
-    }, 500);
-  }, 1000);
+    Session.set("soundcloud:" + SCPlaylistId, getSoundCloud(SCPlaylistId));
+    setTimeout(() => {
+      $('#sc-playlist').addClass('animated fadeInUp');
+      $('#sc-playlist').css({ opacity : 1 });
+    }, 1000);
+  }, 1500);
+
 });
 
 Template.Musician_panel.helpers({
-  getSoundCloudHTML: function(id) {
-    return Session.get('soundcloud:' + id);
+  getSCPlaylist: function(id) {
+    return Session.get("soundcloud:" + id);
   }
 });
 
