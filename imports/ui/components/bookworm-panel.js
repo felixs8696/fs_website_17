@@ -39,7 +39,7 @@ Template.Bookworm_panel.onRendered(function() {
   setTimeout(() => {
     $('.bookworm-content').addClass('animated fadeInUp');
     $('.bookworm-content').css({ opacity : 1 });
-  }, 1000);
+  }, 2000);
 });
 
 Template.Bookworm_panel.helpers({

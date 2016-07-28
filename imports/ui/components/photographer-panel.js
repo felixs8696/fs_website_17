@@ -35,7 +35,7 @@ Template.Photographer_panel.onRendered(function() {
   setTimeout(() => {
     $('.zoom-gallery').addClass('animated fadeInUp');
     $('.zoom-gallery').css({ opacity : 1 });
-  }, 1000);
+  }, 2000);
 });
 
 Template.Photographer_panel.helpers({

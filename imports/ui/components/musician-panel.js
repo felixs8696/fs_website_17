@@ -13,8 +13,8 @@ Template.Musician_panel.onCreated(function musicianPanelOnCreated() {
 
 Template.Musician_panel.onRendered(function() {
   setTimeout(() => {
-    $('.musician-content').addClass('animated fadeInUp');
-    $('.musician-content').css({ opacity : 1 });
+    $('.youtube-gallery').addClass('animated fadeInUp');
+    $('.youtube-gallery').css({ opacity : 1 });
   }, 1000);
   $('.youtube-gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
