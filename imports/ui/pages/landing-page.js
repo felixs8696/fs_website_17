@@ -68,16 +68,19 @@ function initFacets() {
   Session.set('currentPage', 'hacker');
   Session.set('facetContent', facetDetails['hacker']);
   Session.set('facetTemplate', 'Hacker_panel');
+  return;
 }
 
 function initDisplay() {
   $('#project-header-content').css({ display : 'none' });
   $('#prev-button').css({ display : 'none' });
+  return;
 }
 
 function removeAddClass(selector, removeClass, addClass) {
   $(selector).removeClass(removeClass);
   $(selector).addClass(addClass);
+  return;
 }
 
 function clearLoadedSessions() {
@@ -85,12 +88,14 @@ function clearLoadedSessions() {
     if (key.includes("soundcloud:")) {
       Session.set(key, undefined);
     }
-  })
+  });
+  return;
 }
 
 function initSessionVars() {
   Session.set('gitHubContent', gitHubContent);
   Session.set('SCPlaylistIds', [245460937, 245470427]);
+  return;
 }
 
 Template.Landing_page.onCreated(function landingPageOnCreated() {
@@ -100,7 +105,7 @@ Template.Landing_page.onCreated(function landingPageOnCreated() {
 
 Template.Landing_page.onRendered(function () {
   initDisplay();
-  $.getScript('/js/lazysizes.min.js');
+  // $.getScript('/js/lazysizes.min.js');
   $(document).on('scroll', function() {
     if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){
       $('.jumbotron').css({ display: 'block' });
