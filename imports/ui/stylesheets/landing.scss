@@ -7,7 +7,7 @@
   height: 4em;
 }
 .jumbotron {
-  background: url("./felix_marseille.jpg");
+  background: url("/felix_marseille.jpg");
   background-size: cover;
   background-position: center center;
   -webkit-backface-visibility: hidden;
@@ -108,7 +108,7 @@
   display: block;
 }
 .profile-photo {
-  background: url("./linkedin_2.jpg");
+  background: url("/linkedin_2.jpg");
   background-size: cover;
   background-position: center center;
   position: absolute;

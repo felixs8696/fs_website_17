@@ -105,7 +105,6 @@ Template.Landing_page.onCreated(function landingPageOnCreated() {
 
 Template.Landing_page.onRendered(function () {
   initDisplay();
-  // $.getScript('/js/lazysizes.min.js');
   $(document).on('scroll', function() {
     if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){
       $('.jumbotron').css({ display: 'block' });
