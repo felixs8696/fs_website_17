@@ -3,7 +3,7 @@
     font-size: 1.4rem;
   }
 }
-@media (max-width: 1053px) {
+@media screen and (max-width: 1053px) {
   .parallax-about-section p {
     font-size: 1.3rem;
   }
@@ -28,9 +28,19 @@
     width: 18em;
     height: 28em;
   }
+  .title-container {
+    bottom: 2.5em;
+    right: 2.5em;
+  }
+  .title {
+    font-size: 6rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+  }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .parallax-about-section p {
     font-size: 1.2rem;
   }
@@ -59,9 +69,15 @@
   .about {
     top: 2em;
   }
+  .title {
+    font-size: 6rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+  }
 }
 
-@media (max-width: 827px) {
+@media screen and (max-width: 827px) {
   .parallax-about-section p {
     font-size: 1.2rem;
   }
@@ -90,6 +106,77 @@
   }
   .about {
     top: 0em;
+  }
+  .title {
+    font-size: 5rem;
+    line-height: 8rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .six.columns {
+    width: 100%;
+  }
+  .spacer {
+    display: none;
+  }
+  .parallax-content {
+    position: relative;
+    top: initial;
+    height: auto;
+  }
+  .parallax-about-section {
+    position: relative;
+    top: initial;
+    height: initial;
+  }
+  .parallax-about-content {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+  }
+  .profile-photo-container {
+    top: 1em;
+  }
+  .photo-section {
+    padding-top: 0;
+    height: 30em;
+    margin-bottom: 0;
+  }
+  .social-box {
+    width: 70%;
+  }
+  .social-container {
+    margin-bottom: 1em;
+  }
+}
+@media screen and (max-width : 550px) {
+  .sidebar-left {
+    float: left;
+    width: calc(100% - 6em);
+  }
+  .sidebar-right {
+    float: right;
+    width: 50px;
+    padding-top: 1em;
+    margin-right: 2em;
+  }
+  .social-box {
+    @extend .sidebar-right;
+  }
+  .photo-section {
+    @extend .sidebar-left;
+  }
+  .about {
+    padding: 2em;
+  }
+  .social-box .two.columns {
+    margin-bottom: -1px;
   }
 }
 
