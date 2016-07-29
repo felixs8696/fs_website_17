@@ -113,12 +113,12 @@ Template.Landing_page.onRendered(function () {
       $('.jumbotron').css({ display: 'none' });
     }
     if($(this).scrollTop() < $('.parallax-content').position().top + 200){
-      $('.title-container').removeClass('animated fadeOutRight');
-      $('.title-container').addClass('animated fadeInRight');
+      $('.title-container').removeClass('animated fadeOut');
+      $('.title-container').addClass('animated fadeIn');
     }
     if($(this).scrollTop() >= $('.parallax-content').position().top + 200){
-      $('.title-container').removeClass('animated fadeInRight');
-      $('.title-container').addClass('animated fadeOutRight');
+      $('.title-container').removeClass('animated fadeIn');
+      $('.title-container').addClass('animated fadeOut');
     }
     if($(this).scrollTop() < $('.project_1_back').position().top - 500){
       $('#project-header-content').removeClass('animated fadeInLeft');

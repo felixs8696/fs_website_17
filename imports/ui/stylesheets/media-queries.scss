@@ -178,6 +178,50 @@
   .social-box .two.columns {
     margin-bottom: -1px;
   }
+  .profile-photo-container {
+    width: 15em;
+    height: 23em;
+  }
+  .photo-section {
+    height: 25em;
+  }
+  .profile-photo,
+  .photo-frame {
+    width: 13em;
+    height: 21em;
+  }
+  .photo-frame {
+    border-width: .5em;
+  }
+}
+
+@media screen and (max-width : 480px) {
+  .social-box {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .photo-section {
+    float: none;
+    width: 100%;
+  }
+  .social-box .two.columns {
+    width: 16.6666666666%;
+    text-align: center;
+  }
+  .icon-row-offset {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .icon-box {
+    padding: 1.1em;
+    width: 1.1em;
+    height: 1.1em;
+  }
+  .icon-box i {
+    font-size: 1em;
+  }
 }
 
 // /* Smartphones (portrait and landscape) ----------- */
