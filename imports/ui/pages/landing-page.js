@@ -113,21 +113,19 @@ Template.Landing_page.onRendered(function () {
       $('.jumbotron').css({ display: 'none' });
     }
     if($(this).scrollTop() < $('.parallax-content').position().top + 200){
-      $('.title-container').removeClass('animated fadeOut');
-      $('.title-container').addClass('animated fadeIn');
+      removeAddClass('.title-container', 'animated fadeOut', 'animated fadeIn');
+      if (screen.width <= 550) removeAddClass('.logo', 'animated fadeOut', 'animated fadeIn');
     }
     if($(this).scrollTop() >= $('.parallax-content').position().top + 200){
-      $('.title-container').removeClass('animated fadeIn');
-      $('.title-container').addClass('animated fadeOut');
+      removeAddClass('.title-container', 'animated fadeIn', 'animated fadeOut');
+      if (screen.width <= 550) removeAddClass('.logo', 'animated fadeIn', 'animated fadeOut');
     }
     if($(this).scrollTop() < $('.project_1_back').position().top - 500){
-      $('#project-header-content').removeClass('animated fadeInLeft');
-      $('#project-header-content').addClass('animated fadeOutLeft');
+      removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
     }
     if($(this).scrollTop() >= $('.project_1_back').position().top - 500){
       $('#project-header-content').css({ display : 'block' });
-      $('#project-header-content').removeClass('animated fadeOutLeft');
-      $('#project-header-content').addClass('animated fadeInLeft');
+      removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
     }
 
   });
