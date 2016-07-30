@@ -218,5 +218,10 @@ Template.Landing_page.events({
     if (idx - 1 <= 0) {
       $('#prev-button').css({ display : 'none' });
     }
+  },
+
+  'click .main': function() {
+    window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
   }
+
 });
