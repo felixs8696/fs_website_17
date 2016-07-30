@@ -107,10 +107,10 @@ Template.Landing_page.onRendered(function () {
   initDisplay();
   $(document).on('scroll', function() {
     if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){
-      $('.jumbotron').css({ display: 'block' });
+      $('.jumbotron').css({ opacity: 1 });
     }
     if($(this).scrollTop() >= $('.parallax-about-section').position().top){
-      $('.jumbotron').css({ display: 'none' });
+      $('.jumbotron').css({ opacity: 0 });
     }
     if($(this).scrollTop() < $('.parallax-content').position().top + 200){
       removeAddClass('.title-container', 'animated fadeOut', 'animated fadeIn');
