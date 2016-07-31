@@ -22,6 +22,7 @@ body {
 }
 .company-logo {
   width: 100%;
+  display: block;
 }
 .company-name {
   font-size: 2rem;
@@ -49,4 +50,7 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   width: 100%;
+}
+.work-desc li {
+  margin: 0;
 }

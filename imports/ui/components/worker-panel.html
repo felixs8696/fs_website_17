@@ -1,13 +1,9 @@
 <template name="Worker_panel">
   <div class="panel-background worker-background">
-    <div class="row gallery-row">
-      {{> Job
-        name=(getWorkContent 'akala' 'name')
-        logo=(getWorkContent 'akala' 'logo')
-        position=(getWorkContent 'akala' 'position')
-        date=(getWorkContent 'akala' 'date')
-        desc=(getWorkContent 'akala' 'desc')
-      }}
-    </div>
+    {{#each getWorkContents}}
+      <div class="row gallery-row">
+        {{> Job name=name logo=logo position=position date=date desc=desc}}
+      </div>
+    {{/each}}
   </div>
 </template>
