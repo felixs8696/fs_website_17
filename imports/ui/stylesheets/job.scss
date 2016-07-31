@@ -1,0 +1,52 @@
+body {
+  font-family: 'Roboto';
+}
+.job {
+  width: 100%;
+}
+.company-info-container {
+  width: 20%;
+  float: left;
+  padding: 10px;
+}
+.company-img-container {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.company-logo {
+  width: 100%;
+}
+.company-name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.position-content {
+  width: 80%;
+  float: right;
+  padding-left: 1em;
+}
+.job-row {
+  width: 100%;
+}
+.employment-position {
+  font-size: 1.5rem;
+  font-weight: 500;
+  float: left;
+}
+.working-date {
+  font-size: 1.5rem;
+  font-weight: 300;
+  float: right;
+}
+.work-desc {
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 100%;
+}

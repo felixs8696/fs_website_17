@@ -3,6 +3,7 @@ $dark-neutral-blue: #103849;
 $guitar-beige: #EBDAC0;
 $berkeley-blue: #416289;
 $flat-blue-1: #3498DB;
+$light-gray: #DDDDDD;
 
 /* Import SCSS files here. */
 @import '../imports/ui/stylesheets/normalize.scss';
@@ -14,7 +15,9 @@ $flat-blue-1: #3498DB;
 @import '../imports/ui/stylesheets/landing.scss';
 @import '../imports/ui/stylesheets/project-card.scss';
 @import '../imports/ui/stylesheets/panel.scss';
+@import '../imports/ui/stylesheets/job.scss';
 @import '../imports/ui/stylesheets/photographer.scss';
 @import '../imports/ui/stylesheets/musician.scss';
 @import '../imports/ui/stylesheets/bookworm.scss';
+@import '../imports/ui/stylesheets/worker.scss';
 @import '../imports/ui/stylesheets/media-queries.scss';

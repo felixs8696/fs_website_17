@@ -5,6 +5,7 @@ import '../components/hacker-panel.js';
 import '../components/photographer-panel.js';
 import '../components/musician-panel.js';
 import '../components/bookworm-panel.js';
+import '../components/worker-panel.js';
 
 import './landing-page.html';
 
@@ -14,6 +15,12 @@ var facetDetails = {
     title: 'Hacker',
     desc: 'I love being innovative and keep myself busy by hacking up new projects. Here are my most recent ventures. Click on them to read about their stories.',
     image: '/facets/coder.png'
+  },
+  worker: {
+    template: "Worker_panel",
+    title: 'Worker',
+    desc: 'I see companies as a way to contribute to the best solutions for existing problems. Coding is like magic. With it we can make self-driving cars, prosthetics, drones, virtual reality. I would love to be able to add to that magic.',
+    image: '/facets/worker.png'
   },
   bookworm: {
     template: "Bookworm_panel",

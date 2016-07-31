@@ -1,0 +1,23 @@
+<template name="Job">
+  <div class="job">
+    <div class="company-info-container">
+      <div class="company-img-container">
+        <img class="company-logo" src="{{logo}}"/>
+      </div>
+    </div>
+    <div class="position-content">
+      <div class="row job-row">
+        <div class="company-name">{{name}}</div>
+        <div class="employment-position">{{position}}</div>
+        <div class="working-date">{{date}}</div>
+      </div>
+      <div class="work-desc">
+        <ul>
+          {{#each desc}}
+            <li>{{content}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
