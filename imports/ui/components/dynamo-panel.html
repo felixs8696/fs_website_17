@@ -1,0 +1,9 @@
+<template name="Dynamo_panel">
+  <div class="panel-background dynamo-background">
+    <div class="org-container">
+      {{#each getOrganizations}}
+        <img class="inner-img {{style}} animated orgFadeInUp _{{animInt}}" src="{{img}}" title="{{title}}" onclick="window.open('{{url}}');"/>
+      {{/each}}
+    </div>
+  </div>
+</template>

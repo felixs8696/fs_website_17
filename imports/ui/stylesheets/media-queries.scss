@@ -269,6 +269,12 @@
   .grid__item {
     padding: 30px 40px 15px;
   }
+  .square {
+    height: 80px;
+  }
+  .rect {
+    height: 50px;
+  }
 }
 
 @media screen and (max-width : 480px) {
@@ -325,5 +331,11 @@
   .meta__date,
   .meta__reading-time {
     display: none;
+  }
+  .square {
+    height: 60px;
+  }
+  .rect {
+    height: 38px;
   }
 }

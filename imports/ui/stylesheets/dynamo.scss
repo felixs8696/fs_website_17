@@ -1,0 +1,64 @@
+.dynamo-background {
+  background: $dynamo;
+  position: relative;
+}
+.org-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.box {
+  margin-bottom: 20px;
+}
+.inner-img {
+  margin: 25px 15px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  cursor: pointer;
+}
+.inner-img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.square {
+  height: 100px;
+}
+.rect {
+  height: 70px;
+}
+@-webkit-keyframes orgFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 0.6;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes orgFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 0.6;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.orgFadeInUp {
+  -webkit-animation-name: orgFadeInUp;
+  animation-name: orgFadeInUp;
+  animation-fill-mode: backwards;
+}

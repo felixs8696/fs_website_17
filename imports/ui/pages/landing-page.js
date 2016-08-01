@@ -6,6 +6,7 @@ import '../components/photographer-panel.js';
 import '../components/musician-panel.js';
 import '../components/bookworm-panel.js';
 import '../components/worker-panel.js';
+import '../components/dynamo-panel.js';
 
 import './landing-page.html';
 
@@ -21,6 +22,12 @@ var facetDetails = {
     title: 'Worker',
     desc: 'I see companies as a way to contribute to the best solutions for existing problems. Coding is like magic. With it we can make self-driving cars, prosthetics, drones, virtual reality. I would love to be able to add to that magic.',
     image: '/facets/worker.png'
+  },
+  dynamo: {
+    template: "Dynamo_panel",
+    title: 'Dynamo',
+    desc: 'College is an amazing collection of multi-talents people and organizations. I love getting involved and getting my hands as dirty as possible. If I am always around great people their talents and personalities are sure to rub off on me.',
+    image: '/facets/dynamo.png'
   },
   bookworm: {
     template: "Bookworm_panel",
