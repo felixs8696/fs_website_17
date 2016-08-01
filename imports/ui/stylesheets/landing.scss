@@ -219,3 +219,34 @@
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
+.about-skills {
+  margin-top: 1em;
+  width: 100%;
+  text-align: initial;
+}
+.about-skills hr {
+  border-color: $font-light-gray;
+  margin: 5px 0;
+}
+.skills-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.skills-content {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  display: block;
+}
+.skills-sub-title {
+  font-weight: 500;
+  display: inline-block;
+}
+.skills-list {
+  font-weight: 400;
+  padding-left: 1rem;
+  float: right;
+  display: inline-block;
+  color: $font-light-gray;
+  text-align: initial
+}

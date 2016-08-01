@@ -2,6 +2,19 @@
   .parallax-about-section p {
     font-size: 1.4rem;
   }
+  .about {
+    top: 1em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .skills-sub-title {
+    display: inline-block;
+  }
+  .skills-list {
+    padding-left: 0;
+    float: none;
+    display: inline-block;
+  }
 }
 @media screen and (max-width: 1053px) {
   .parallax-about-section p {
@@ -42,7 +55,16 @@
     font-size: 2em;
   }
 }
-
+@media screen and (max-width: 1000px) {
+  .about {
+    padding-right: 1.5em;
+    position: initial;
+    top: 1em;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .jumbotron {
     background-position: 25% center;

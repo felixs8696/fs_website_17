@@ -76,6 +76,13 @@ var gitHubContent = {
   }
 }
 
+var skillsContent = [
+  {title: 'Languages', list: 'JavaScript, Java, Python, C, R, Bash, LaTeX, HTML/CSS, XML'},
+  {title: 'Frameworks', list: 'Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
+  {title: 'Services', list: 'MongoDB, Firebase, Heroku, SendGrid, Git'},
+  {title: 'APIs', list: 'Google (Maps, Search, Autocomplete), Postmates, Stripe, Ace, Filestack'}
+]
+
 var facetNames = Object.keys(facetDetails);
 
 function initFacets() {
@@ -152,6 +159,10 @@ Template.Landing_page.helpers({
 
   getFacetTemplate: function() {
     return Session.get('facetTemplate');
+  },
+
+  getSkillsContent: function() {
+    return skillsContent;
   }
 });
 
