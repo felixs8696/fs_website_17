@@ -1,94 +1,56 @@
 <template name="Bookworm_panel">
   <div class="panel-background bookworm-background">
-    <div class="bookworm-content" style="opacity : 0;">
-      <div class="row gallery-row">
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('http://felixsu.com/external/abaworkshop.html#/');">
-            <div class="resource-title">[ABA] Professional Workshop</div>
-            <div class="resource-desc">Rethink Your Future - What are your priorities?</div>
-          </div>
-        </div>
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('http://felixsu.com/external/startupworkshop.html#/');">
-            <div class="resource-title">[ABA] Startup Workshop</div>
-            <div class="resource-desc">Define Your Role and Scale Effectively</div>
-          </div>
-        </div>
-      </div>
-      <div class="row gallery-row">
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('http://felixsu.com/external/abarslides.html#1');">
-            <div class="resource-title">Intro to R (Data Computing)</div>
-            <div class="resource-desc">Use Code to Boost your Presentations</div>
-          </div>
-        </div>
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('https://captiontool.firebaseapp.com/#/');">
-            <div class="resource-title">CaptionTool for Media Tech</div>
-            <div class="resource-desc">Paragraphs to Subtitles in Seconds</div>
-          </div>
-        </div>
-      </div>
-      <div class="row gallery-row">
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('http://felixsu.com/content/files/REST/index.html');">
-            <div class="resource-title">Notes on RESTful design</div>
-            <div class="resource-desc">Maintain Flexibility and Scalability</div>
-          </div>
-        </div>
-        <div class="six columns">
-          <div class="resource-card clickable" onclick="window.open('http://felixsu.com/content/files/Databases/index.html');">
-            <div class="resource-title">Notes on Databases</div>
-            <div class="resource-desc">Brief Notes on Relational and Document DBs</div>
-          </div>
-        </div>
-      </div>
-      <div id="gitHubContent">
-        <div class="row gallery-row">
-          <div class="six columns">
-            <div class="resource-card clickable" onclick="window.open('{{getGitHubContent 'cs70' 'url'}}');">
-              <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
-              <div class="github-tag">GitHub</div>
-              <div class="resource-title">{{getGitHubContent 'cs70' 'title'}} <sup><strong>{{getGitHubContent 'cs70' 'lang'}}</strong></sup></div>
-              <div class="resource-desc">{{getGitHubContent 'cs70' 'desc'}}</div>
-              <hr>
-              <div class="resource-desc">Created by <strong>felixs8696</strong></div>
+    <div class="bookworm-content animated fadeInUp _3">
+      {{#each getResourceContent}}
+        {{#if evenIndex @index}}
+          <div class="row gallery-row">
+            <div class="six columns">
+              <div class="resource-card clickable" onclick="window.open('{{url}}');">
+                <div class="resource-title">{{title}}</div>
+                <div class="resource-desc">{{desc}}</div>
+              </div>
             </div>
+            {{#if nextItemExists (getResourceContent) @index}}
+              <div class="six columns">
+                <div class="resource-card clickable" onclick="window.open('{{getNextItemAttr (getResourceContent) @index 'url'}}');">
+                  <div class="resource-title">{{getNextItemAttr (getResourceContent) @index 'title'}}</div>
+                  <div class="resource-desc">{{getNextItemAttr (getResourceContent) @index 'desc'}}</div>
+                </div>
+              </div>
+            {{/if}}
           </div>
-          <div class="six columns">
-            <div class="resource-card clickable" onclick="window.open('{{getGitHubContent 'ee16a' 'url'}}');">
-              <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
-              <div class="github-tag">GitHub</div>
-              <div class="resource-title">{{getGitHubContent 'ee16a' 'title'}} <sup><strong>{{getGitHubContent 'ee16a' 'lang'}}</strong></sup></div>
-              <div class="resource-desc">{{getGitHubContent 'ee16a' 'desc'}}</div>
-              <hr>
-              <div class="resource-desc">Created by <strong>felixs8696</strong></div>
+        {{/if}}
+      {{/each}}
+    </div>
+    <div id="gitHubContent" class="animated fadeInUp _4">
+      {{#each getGitHubContent}}
+        {{#if evenIndex @index}}
+          <div class="row gallery-row">
+            <div class="six columns">
+              <div class="resource-card clickable" onclick="window.open('{{url}}');">
+                <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
+                <div class="github-tag">GitHub</div>
+                <div class="resource-title">{{title}} <sup><strong>{{lang}}</strong></sup></div>
+                <div class="resource-desc">{{desc}}</div>
+                <hr>
+                <div class="resource-desc">Created by <strong>felixs8696</strong></div>
+              </div>
             </div>
+            {{#if nextItemExists (getGitHubContent) @index}}
+              <div class="six columns">
+                <div class="resource-card clickable" onclick="window.open('{{getNextItemAttr (getGitHubContent) @index 'url'}}');">
+                  <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
+                  <div class="github-tag">GitHub</div>
+                  <div class="resource-title">{{getNextItemAttr (getGitHubContent) @index 'title'}} <sup><strong>{{getNextItemAttr (getGitHubContent) @index 'lang'}}</strong></sup></div>
+                  <div class="resource-desc">{{getNextItemAttr (getGitHubContent) @index 'desc'}}</div>
+                  <hr>
+                  <div class="resource-desc">Created by <strong>felixs8696</strong></div>
+                </div>
+              </div>
+            {{/if}}
           </div>
-        </div>
-        <div class="row gallery-row">
-          <div class="six columns">
-            <div class="resource-card clickable" onclick="window.open('{{getGitHubContent 'stat133' 'url'}}');">
-              <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
-              <div class="github-tag">GitHub</div>
-              <div class="resource-title">{{getGitHubContent 'stat133' 'title'}} <sup><strong>{{getGitHubContent 'stat133' 'lang'}}</strong></sup></div>
-              <div class="resource-desc">{{getGitHubContent 'stat133' 'desc'}}</div>
-              <hr>
-              <div class="resource-desc">Created by <strong>felixs8696</strong></div>
-            </div>
-          </div>
-          <div class="six columns">
-            <div class="resource-card clickable" onclick="window.open('{{getGitHubContent 'meteor' 'url'}}');">
-              <div class="avatar"><div class="image" style="background-image: url('/felix_avatar.jpg');"></div></div>
-              <div class="github-tag">GitHub</div>
-              <div class="resource-title">{{getGitHubContent 'meteor' 'title'}} <sup><strong>{{getGitHubContent 'meteor' 'lang'}}</strong></sup></div>
-              <div class="resource-desc">{{getGitHubContent 'meteor' 'desc'}}</div>
-              <hr>
-              <div class="resource-desc">Created by <strong>felixs8696</strong></div>
-            </div>
-          </div>
-        </div>
-      </div>
+        {{/if}}
+      {{/each}}
     </div>
   </div>
 </template>
