@@ -19,7 +19,8 @@ var workContents = [
       {content: "Temporarily using email to store redundant data of applicant submissions in the company account"},
       {content: "Developed packaged revenue model, investor pitch, and marketing/sales strategies with the team"},
       {content: "Working on server-side compilers and code processing to automate computational and practical code evaluations"}
-    ]
+    ],
+    animInt: 3
   },{
     name: "AKALA",
     logo: "/companies/akala.png",
@@ -29,7 +30,8 @@ var workContents = [
       {content: "Developed a mobile app for virtual college counseling using Meteor as a full stack framework"},
       {content: "Minimized effects of server calls on client views by caching data in localStorage"},
       {content: "Implemented front-end and stored data in MongoDB in proper JSON format to be available for REST calls"}
-    ]
+    ],
+    animInt: 4
   },
   {
     name: "Beeyond Inc.",
@@ -42,7 +44,8 @@ var workContents = [
       {content: "Designed the front-end infrastructure using Ionic and Cordova for cross-platform integration"},
       {content: "Implemented the authentication flow with database checks and front-end alerts for faulty inputs"},
       {content: "Lazy loaded tinder-style cards and optimized the database schema for UI/UX performance."}
-    ]
+    ],
+    animInt: 5
   },
   {
     name: "The Princeton Education Network",
@@ -52,7 +55,8 @@ var workContents = [
     desc: [
       {content: "Designed a new website for SAT, ACT, and college application guidance and increased marketing with SEO"},
       {content: "Increased customers from ~200 to over 3000, collecting more than 4000 visits and 13,000 page views"}
-    ]
+    ],
+    animInt: 6
   }
 ]
 
