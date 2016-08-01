@@ -25,8 +25,9 @@ body {
   display: block;
 }
 .company-name {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 500;
+  float: left;
 }
 .position-content {
   width: 80%;
@@ -37,12 +38,13 @@ body {
   width: 100%;
 }
 .employment-position {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 700;
   float: left;
+  width: 100%;
 }
 .working-date {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 300;
   float: right;
 }
