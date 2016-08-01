@@ -83,6 +83,15 @@ var skillsContent = [
   {title: 'APIs', list: 'Google (Maps, Search, Autocomplete), Postmates, Stripe, Ace, Filestack'}
 ]
 
+var socialContent = [
+  {type: 'facebook', url: 'https://facebook.com/felix.su.37'},
+  {type: 'linkedin', url: 'https://www.linkedin.com/in/felixsu'},
+  {type: 'github', url: 'https://github.com/felixs8696'},
+  {type: '500px', url: 'https://500px.com/felixsu'},
+  {type: 'youtube', url: 'https://www.youtube.com/user/felixs8696'},
+  {type: 'soundcloud', url: 'https://soundcloud.com/felix-su'}
+]
+
 var facetNames = Object.keys(facetDetails);
 
 function initFacets() {
@@ -163,38 +172,14 @@ Template.Landing_page.helpers({
 
   getSkillsContent: function() {
     return skillsContent;
+  },
+
+  getSocialContent: function() {
+    return socialContent;
   }
 });
 
 Template.Landing_page.events({
-  'click #facebook-link': function() {
-    window.open("https://facebook.com/felix.su.37");
-  },
-
-  'click #linkedin-link': function() {
-    window.open("https://www.linkedin.com/in/felixsu");
-  },
-
-  'click #github-link': function() {
-    window.open("https://github.com/felixs8696");
-  },
-
-  'click #500px-link': function() {
-    window.open("https://500px.com/felixsu");
-  },
-
-  'click #youtube-link': function() {
-    window.open("https://www.youtube.com/user/felixs8696/");
-  },
-
-  'click #soundcloud-link': function() {
-    window.open("https://soundcloud.com/felix-su");
-  },
-
-  'click #instagram-link': function() {
-    window.open("https://www.instagram.com/felixs8696/");
-  },
-
   'click #next-button': function() {
     var currPage = Session.get('currentPage');
     var idx = facetNames.indexOf(currPage);

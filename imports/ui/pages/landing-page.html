@@ -27,36 +27,13 @@
           </div>
           <div class="social-box">
             <div class="row icon-row-offset">
+              {{#each getSocialContent}}
               <div class="two columns">
-                <div id="facebook-link" class="icon-box clickable">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                <div class="icon-box clickable" onclick="window.open('{{url}}')">
+                  <i class="fa fa-{{type}}" aria-hidden="true"></i>
                 </div>
               </div>
-              <div class="two columns">
-                <div id="linkedin-link" class="icon-box clickable">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="two columns">
-                <div id="github-link" class="icon-box clickable">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="two columns">
-                <div id="500px-link" class="icon-box clickable">
-                  <i class="fa fa-500px" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="two columns">
-                <div id="youtube-link" class="icon-box clickable">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="two columns">
-                <div id="soundcloud-link" class="icon-box clickable">
-                  <i class="fa fa-soundcloud" aria-hidden="true"></i>
-                </div>
-              </div>
+              {{/each}}
             </div>
           </div>
         </div>
