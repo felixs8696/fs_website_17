@@ -49,33 +49,6 @@ var facetDetails = {
   }
 };
 
-var gitHubContent = {
-  cs70: {
-    title: 'cs70-study-materials',
-    desc: 'CS 70 Study Materials',
-    lang: "TeX",
-    url: "https://github.com/felixs8696/cs70-study-materials"
-  },
-  ee16a: {
-    title: 'ee16a-study-materials',
-    desc: "UC Berkeley's EE16A Notes and Resources",
-    lang: "TeX",
-    url: "https://github.com/felixs8696/ee16a-study-materials"
-  },
-  stat133: {
-    title: 'stat133-studymaterials',
-    desc: "UC Berkeley's STAT133 Notes and Resources",
-    lang: "HTML",
-    url: "https://github.com/felixs8696/stat133-studymaterials"
-  },
-  meteor: {
-    title: 'meteor-ngIonic-sidemenu',
-    desc: 'Starter Template for Meteor-Angular-Ionic',
-    lang: "JavaScript",
-    url: "https://github.com/felixs8696/meteor-ngIonic-sidemenu"
-  }
-}
-
 var skillsContent = [
   {title: 'Languages', list: 'JavaScript, HTML/CSS, Java, Python, C, R, Bash, LaTeX, XML'},
   {title: 'Frameworks', list: 'Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
@@ -90,6 +63,35 @@ var socialContent = [
   {type: '500px', url: 'https://500px.com/felixsu'},
   {type: 'youtube', url: 'https://www.youtube.com/user/felixs8696'},
   {type: 'soundcloud', url: 'https://soundcloud.com/felix-su'}
+]
+
+var chartXAxis = [
+  {index: 'l--0', title: 'Baby Steps', style: "color: #B4E8C0;"},
+  {index: 'l--25', title: "Rookie", style: "color: #B5CFD8;"},
+  {index: 'l--50', title: 'Medium', style: "color: #516C8D;"},
+  {index: 'l--75', title: 'Pro', style: "color: #303841;"},
+  {index: 'l--100', title: 'Badass', style: "color: #FC5050;"}
+]
+
+var chartContent = [
+  { title: 'Software Development',
+    content: [
+      {type: 'Frontend', skill: 90},
+      {type: 'Web Design', skill: 90},
+      {type: 'Mobile Apps', skill: 80},
+      {type: 'Backend', skill: 70},
+      {type: 'UI/UX Design', skill: 70},
+      {type: 'Database Management', skill: 60}
+    ]
+  },
+  { title: 'Design',
+    content: [
+      {type: 'Sketch3', skill: 90},
+      {type: 'Lightroom 5', skill: 80},
+      {type: 'After Effects / Premier Pro', skill: 70},
+      {type: 'Illustrator / Photoshop', skill: 50}
+    ]
+  },
 ]
 
 var facetNames = Object.keys(facetDetails);
@@ -123,7 +125,6 @@ function clearLoadedSessions() {
 }
 
 function initSessionVars() {
-  Session.set('gitHubContent', gitHubContent);
   Session.set('SCPlaylistIds', [245460937, 245470427]);
   return;
 }
@@ -176,6 +177,14 @@ Template.Landing_page.helpers({
 
   getSocialContent: function() {
     return socialContent;
+  },
+
+  getChartXAxis: function() {
+    return chartXAxis;
+  },
+
+  getChartContent: function() {
+    return chartContent;
   }
 });
 
@@ -235,12 +244,16 @@ Template.Landing_page.events({
   },
 
   'click .card.effect__click': function (event, template) {
-    console.log(event);
-    console.log(template);
-    console.log(this);
     var c = event.currentTarget.classList;
-    // var c = this.classList;
     c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+  },
+
+  'click .card__front'  : function() {
+    $(".chart--horiz").children().addClass('animated fadeInLeft');
+  },
+
+  'click .card__back'  : function() {
+    $(".chart--horiz").children().removeClass('animated fadeInLeft');
   }
 
 });

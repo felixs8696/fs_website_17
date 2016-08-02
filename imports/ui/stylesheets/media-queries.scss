@@ -312,6 +312,22 @@
   .rect {
     height: 50px;
   }
+  .chart__label {
+    padding-left: 5px;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+  .chart__bar {
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+  .chart__title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .lines .line .line__label {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width : 480px) {

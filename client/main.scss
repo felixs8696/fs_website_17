@@ -6,6 +6,7 @@ $flat-blue-1: #3498DB;
 $light-gray: #DDDDDD;
 $dynamo: #3CA55C;
 $font-light-gray: #999999;
+$smooth-medium-blue: #3A6073;
 
 /* Import SCSS files here. */
 @import '../imports/ui/stylesheets/normalize.scss';
@@ -25,4 +26,5 @@ $font-light-gray: #999999;
 @import '../imports/ui/stylesheets/bookworm.scss';
 @import '../imports/ui/stylesheets/worker.scss';
 @import '../imports/ui/stylesheets/dynamo.scss';
+@import '../imports/ui/stylesheets/chart.scss';
 @import '../imports/ui/stylesheets/media-queries.scss';

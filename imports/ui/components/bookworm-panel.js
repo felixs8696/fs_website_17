@@ -4,12 +4,12 @@ import { Template } from 'meteor/templating';
 import "./bookworm-panel.html";
 
 var resourceContent = [
-  {title: '[ABA] Professional Workshop', desc: 'Rethink Your Future - What are your priorities?', url: 'http://felixsu.com/external/abaworkshop.html#/'},
-  {title: '[ABA] Startup Workshop', desc: 'Define Your Role and Scale Effectively', url: 'http://felixsu.com/external/startupworkshop.html#/'},
-  {title: 'Intro to R (Data Computing)', desc: 'Use Code to Boost your Presentations', url: 'http://felixsu.com/external/abarslides.html#1'},
+  {title: '[ABA] Professional Workshop', desc: 'Rethink Your Future - What are your priorities?', url: 'http://felixs8696.github.io/external/abaworkshop.html#/'},
+  {title: '[ABA] Startup Workshop', desc: 'Define Your Role and Scale Effectively', url: 'http://felixs8696.github.io/external/startupworkshop.html#/'},
+  {title: 'Intro to R (Data Computing)', desc: 'Use Code to Boost your Presentations', url: 'http://felixs8696.github.io/external/abarslides.html#1'},
   {title: 'CaptionTool for Media Tech', desc: 'Paragraphs to Subtitles in Seconds', url: 'https://captiontool.firebaseapp.com/#/'},
-  {title: 'Notes on RESTful design', desc: 'Maintain Flexibility and Scalability', url: 'http://felixsu.com/content/files/REST/index.html'},
-  {title: 'Notes on Databases', desc: 'Brief Notes on Relational and Document DBs', url: 'http://felixsu.com/content/files/Databases/index.html'}
+  {title: 'Notes on RESTful design', desc: 'Maintain Flexibility and Scalability', url: 'http://felixs8696.github.io/content/files/REST/index.html'},
+  {title: 'Notes on Databases', desc: 'Brief Notes on Relational and Document DBs', url: 'http://felixs8696.github.io/content/files/Databases/index.html'}
 ]
 
 var gitHubContent = [
