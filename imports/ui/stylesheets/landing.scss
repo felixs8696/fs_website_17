@@ -115,16 +115,20 @@
 .social-container {
   width: 100%;
 }
-.profile-photo {
-  background: url("/linkedin_2.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
+.profile-photo-card {
   top: 0;
   left: 0;
   width: 19em;
   height: 29em;
   box-shadow: 0 0 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+}
+.profile-photo {
+  background: url("/linkedin_2.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: 29em;
 }
 .photo-frame {
   border: 1em solid $dark-neutral-blue;

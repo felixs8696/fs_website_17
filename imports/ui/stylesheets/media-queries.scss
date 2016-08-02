@@ -36,8 +36,11 @@
     height: 32em;
     top: 1em;
   }
-  .profile-photo {
+  .profile-photo-card {
     width: 18em;
+    height: 28em;
+  }
+  .profile-photo {
     height: 28em;
   }
   .photo-frame {
@@ -89,8 +92,11 @@
     height: 28em;
     top: 2em;
   }
-  .profile-photo {
+  .profile-photo-card {
     width: 15em;
+    height: 25em;
+  }
+  .profile-photo {
     height: 25em;
   }
   .photo-frame {
@@ -184,8 +190,11 @@
     height: 27em;
     top: 4em;
   }
-  .profile-photo {
+  .profile-photo-card {
     width: 14em;
+    height: 24em;
+  }
+  .profile-photo {
     height: 24em;
   }
   .photo-frame {
@@ -277,9 +286,12 @@
   .photo-section {
     height: 25em;
   }
-  .profile-photo,
+  .profile-photo-card,
   .photo-frame {
     width: 13em;
+    height: 21em;
+  }
+  .profile-photo {
     height: 21em;
   }
   .photo-frame {

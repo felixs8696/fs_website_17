@@ -44,6 +44,7 @@ launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.14
+maazalik:highcharts@0.4.0
 meteor@1.2.16
 meteor-base@1.0.4
 meteorhacks:kadira@2.30.0

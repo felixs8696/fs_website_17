@@ -77,7 +77,7 @@ var gitHubContent = {
 }
 
 var skillsContent = [
-  {title: 'Languages', list: 'JavaScript, Java, Python, C, R, Bash, LaTeX, HTML/CSS, XML'},
+  {title: 'Languages', list: 'JavaScript, HTML/CSS, Java, Python, C, R, Bash, LaTeX, XML'},
   {title: 'Frameworks', list: 'Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
   {title: 'Services', list: 'MongoDB, Firebase, Heroku, SendGrid, Git'},
   {title: 'APIs', list: 'Google (Maps, Search, Autocomplete), Postmates, Stripe, Ace, Filestack'}
@@ -232,6 +232,15 @@ Template.Landing_page.events({
 
   'click .main': function() {
     window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+  },
+
+  'click .card.effect__click': function (event, template) {
+    console.log(event);
+    console.log(template);
+    console.log(this);
+    var c = event.currentTarget.classList;
+    // var c = this.classList;
+    c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
   }
 
 });
