@@ -248,12 +248,20 @@ Template.Landing_page.events({
     c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
   },
 
-  'click .card__front'  : function() {
+  'click .card__front': function() {
     $(".chart--horiz").children().addClass('animated fadeInLeft');
   },
 
-  'click .card__back'  : function() {
+  'click .card__back': function() {
     $(".chart--horiz").children().removeClass('animated fadeInLeft');
+  },
+
+  'click .email-button': function() {
+    window.open('mailto:felixs8696@berkeley.edu?Subject=%5BWebsite%20Visitor%5D');
+  },
+
+  'click .resume-button': function() {
+    window.open('/resumes/felixsu_resume_2017.pdf');
   }
 
 });

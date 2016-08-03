@@ -253,3 +253,21 @@
   color: $font-light-gray;
   text-align: initial
 }
+.info-section{
+  position:absolute;
+  top: 1em;
+  right: 1em;
+}
+.email-button,
+.resume-button {
+  float: right;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  font-family: 'Raleway', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.email-button:after {
+  content: ' Email Me';
+}
+.resume-button:after {
+  content: ' My Resume';
+}

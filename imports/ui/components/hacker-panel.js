@@ -24,7 +24,7 @@ var hackerContent = [
   },
   { title:'UCode', founders: 'Project by Felix Su (inspired by Canishka De Silva)', logo: '/projects/ucode-logo.png', desc: 'Contact sharing reimagined with QR codes.', date: 'Dec 2016', time: '1 min read', url: 'https://github.com/felixs8696/UCode', urlTitle: 'UCode GitHub Repo', linkIcon: 'github',
     content: "" +
-    "<p>As an programmer I have been handed plenty of business cards and sent emails and contact info in a variety of formats. Unfortunately it is quite a pain to sort through all of these and manually add them to my contacts. Inspired by Snapchat's snapcode technology I set out to create a similar QR-code style buisness card app that could be re-formatted based on which information you would like to share. Thus, UCode was born.</p>" +
+    "<p>As an programmer I have been handed plenty of business cards and sent emails and contact info in a variety of formats. Unfortunately it is quite a pain to sort through all of these and manually add them to my contacts. Inspired by Snapchat's snapcode technology I set out to create a similar QR-code style business card app that could be re-formatted based on which information you would like to share. Thus, UCode was born.</p>" +
     "<p>Plently of business card apps exist out there, but UCode generates different codes depending on which information you select. With my friends I would like to share all my social media information with, but in professional networking settings I might only like to share my email and phone number. UCode will adapt the QR-code to your settings and send only the requisite information to the recipients.</p>" +
     "<p>This way you will only need the snap of a button to share and receive information.</p>"
   },
