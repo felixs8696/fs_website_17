@@ -273,14 +273,6 @@ Template.Landing_page.events({
     $(".chart--horiz").children().removeClass('animated fadeInLeft');
   },
 
-  'click .email-button': function() {
-    window.open('mailto:admin@felixsu.com?Subject=%5BWebsite%20Visitor%5D');
-  },
-
-  'click .resume-button': function() {
-    window.open('/resumes/felixsu_resume_2017.pdf');
-  },
-
   'click .ticker-icon': function(event, template) {
     changeTicker(event.currentTarget);
     switchPages(this.template);

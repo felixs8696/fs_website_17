@@ -4,8 +4,8 @@
   <div class="parallax-content">
     <div class="jumbotron-overlay"></div>
     <div class="info-section">
-      <button class="button email-button"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-      <button class="button resume-button"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
+      <a class="button email-button" href='mailto:admin@felixsu.com?Subject=%5BWebsite%20Visitor%5D'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a class="button resume-button" href='/resumes/felixsu_resume_2017.pdf'><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
     </div>
     <div class="row">
       <div class="six columns spacer">
@@ -68,9 +68,9 @@
               <div class="row icon-row-offset">
                 {{#each getSocialContent}}
                 <div class="two columns">
-                  <div class="icon-box clickable" onclick="window.open('{{url}}')">
+                  <a class="icon-box clickable" href='{{url}}'>
                     <i class="fa fa-{{type}}" aria-hidden="true"></i>
-                  </div>
+                  </a>
                 </div>
                 {{/each}}
               </div>

@@ -143,6 +143,7 @@
   margin: 0 auto;
 }
 .icon-box {
+  display: block;
   padding: 1.8em;
   width: 2em;
   height: 2em;
@@ -151,6 +152,7 @@
   vertical-align: middle;
   position: relative;
   margin: 0 auto;
+  color: initial;
 }
 .icon-box i {
   font-size: 1.6em;
