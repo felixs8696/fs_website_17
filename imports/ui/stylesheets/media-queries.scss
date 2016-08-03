@@ -170,9 +170,12 @@
   .grid-preview-img {
     width: 50%;
   }
+  .project-img-container {
+    display: none;
+  }
 }
 
-@media screen and (min-aspect-ratio: 7/9) and (max-width: 900px) {
+@media screen and (min-aspect-ratio: 15/9) {
   .project-img-container {
     display: none;
   }
