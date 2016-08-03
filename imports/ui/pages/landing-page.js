@@ -179,6 +179,9 @@ Template.Landing_page.onCreated(function landingPageOnCreated() {
 
 Template.Landing_page.onRendered(function () {
   initDisplay();
+  if (!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
+    $('.title-container').css({ 'margin-bottom': '69px' });
+  }
   $(document).on('scroll', function() {
     if($(this).scrollTop() < $('.main-page').position().top + 100){
       $('.jumbotron').css({ opacity: 1 });
