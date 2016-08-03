@@ -257,7 +257,7 @@ Template.Landing_page.events({
   },
 
   'click .email-button': function() {
-    window.open('mailto:felixs8696@berkeley.edu?Subject=%5BWebsite%20Visitor%5D');
+    window.open('mailto:admin@felixsu.com?Subject=%5BWebsite%20Visitor%5D');
   },
 
   'click .resume-button': function() {

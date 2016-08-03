@@ -9,7 +9,7 @@ var workContents = [
   {
     name: "Hack In",
     logo: "/companies/hackin.png",
-    position: "Founder & CEO",
+    position: "Founder",
     date: "Jul 2016 - Present",
     desc: [
       {content: "Created a customized technical assessment platform to vet software engineer recruits and freelancers"},
