@@ -4,7 +4,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import "./hacker-panel.html";
 
 var hackerContent = [
-  { title:'Hack In', founders: 'Founding Tea: Felix Su, Isabella Rich, Peter Lee, Antti Parviainen, Erika Ho', logo: '/projects/hackin-logo.png', desc: 'An online developer recruitment platform.', date: 'Jul 2016', time: '3 min read', url: 'http://hackin.io', urlTitle: 'Hack In Website', linkIcon: 'link',
+  { title:'Hack In', founders: 'Founding Team: Felix Su, Isabella Rich, Peter Lee, Antti Parviainen, Erika Ho', logo: '/projects/hackin-logo.png', desc: 'An online developer recruitment platform.', date: 'Jul 2016', time: '3 min read', url: 'http://hackin.io', urlTitle: 'Hack In Website', linkIcon: 'link',
     content: "" +
     "<p>Hack In is a developer assessment tool turned aspiring company. It was created in the European Innovation Academy in Nice, France during July 2016 and has generated interest from many venture capitalists at the program who strongly recommended that we continue bootstrapping for 6 months and then turn to VCs for additional funding.</p>" +
     "<p>After working for a few Bay Area startups I found out how painful software developer recruitment was for these small teams. The CTO would often be cooped up in an interview room (usually blankly waiting for an interviewee's response) instead of speedily developing the product with the rest of the tech team, the CEO had little time to pay much heed to the process, and we cycled through many applicants that didn't fit our needs.</p>" +

@@ -137,10 +137,10 @@ Template.Landing_page.onCreated(function landingPageOnCreated() {
 Template.Landing_page.onRendered(function () {
   initDisplay();
   $(document).on('scroll', function() {
-    if($(this).scrollTop() < $('.parallax-about-section').position().top + 100){
+    if($(this).scrollTop() < $('.main-page').position().top + 100){
       $('.jumbotron').css({ opacity: 1 });
     }
-    if($(this).scrollTop() >= $('.parallax-about-section').position().top){
+    if($(this).scrollTop() >= $('.main-page').position().top){
       $('.jumbotron').css({ opacity: 0 });
     }
     if($(this).scrollTop() < $('.parallax-content').position().top + 200){
