@@ -139,10 +139,13 @@ function initSessionVars() {
   return;
 }
 
+function changeTicker(target) {
+  $('.ticker-icon').removeClass('ticker-selected');
+  target.classList.add('ticker-selected');
+}
+
 function switchPages(newPage) {
   var newPageContents = facetDetails[newPage];
-  console.log(newPage);
-  console.log(newPageContents);
   removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
   removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
   setTimeout(function() {
@@ -155,12 +158,14 @@ function switchPages(newPage) {
       removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
     }, 300);
   }, 750);
-  if (facetNames.indexOf(newPage) >= facetNames.length - 1) {
+  var newPageIndex = facetNames.indexOf(newPage);
+  changeTicker($('.ticker-icon')[newPageIndex]);
+  if (newPageIndex >= facetNames.length - 1) {
     $('#next-button').css({ display : 'none' });
   } else {
     $('#next-button').css({ display : 'block' });
   }
-  if (facetNames.indexOf(newPage) <= 0) {
+  if (newPageIndex <= 0) {
     $('#prev-button').css({ display : 'none' });
   } else {
     $('#prev-button').css({ display : 'block' });
@@ -277,8 +282,7 @@ Template.Landing_page.events({
   },
 
   'click .ticker-icon': function(event, template) {
-    $('.ticker-icon').removeClass('ticker-selected');
-    event.currentTarget.classList.add('ticker-selected');
+    changeTicker(event.currentTarget);
     switchPages(this.template);
   }
 
