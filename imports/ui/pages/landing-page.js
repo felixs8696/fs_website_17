@@ -194,10 +194,10 @@ Template.Landing_page.onRendered(function () {
       removeAddClass('.title-container', 'animated fadeIn', 'animated fadeOut');
       if (screen.width <= 550) removeAddClass('.logo', 'animated fadeIn', 'animated fadeOut');
     }
-    if($(this).scrollTop() < $('.project_1_back').position().top - 500){
+    if($(this).scrollTop() < $('.project_1_back').position().top + 300){
       removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
     }
-    if($(this).scrollTop() >= $('.project_1_back').position().top - 500){
+    if($(this).scrollTop() >= $('.project_1_back').position().top + 300){
       $('#project-header-content').css({ display : 'block' });
       removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
     }
