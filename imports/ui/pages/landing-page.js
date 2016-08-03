@@ -7,8 +7,18 @@ import '../components/musician-panel.js';
 import '../components/bookworm-panel.js';
 import '../components/worker-panel.js';
 import '../components/dynamo-panel.js';
+import '../components/ticker.js';
 
 import './landing-page.html';
+
+var facetWheel = [
+  {color: '#FFFFFF', icon: 'code', font: 'black', title: 'Hacker', template: 'hacker'},
+  {color: '#DDDDDD', icon: 'building-o', font: 'black', title: 'Worker', template: 'worker'},
+  {color: '#3CA55C', icon: 'bolt', font: 'white', title: 'Dynamo', template: 'dynamo'},
+  {color: '#416289', icon: 'book', font: 'white', title: 'Bookworm', template: 'bookworm'},
+  {color: '#103849', icon: 'picture-o', font: 'white', title: 'Photographer', template: 'photographer'},
+  {color: '#EBDAC0', icon: 'music', font: 'black', title: 'Musician', template: 'musician'}
+]
 
 var facetDetails = {
   hacker: {
@@ -129,6 +139,34 @@ function initSessionVars() {
   return;
 }
 
+function switchPages(newPage) {
+  var newPageContents = facetDetails[newPage];
+  console.log(newPage);
+  console.log(newPageContents);
+  removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
+  removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
+  setTimeout(function() {
+    Session.set('currentPage', newPage);
+    Session.set('facetContent', newPageContents);
+    Session.set('facetTemplate', newPageContents.template);
+    setTimeout(() => {
+      clearLoadedSessions();
+      removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
+      removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
+    }, 300);
+  }, 750);
+  if (facetNames.indexOf(newPage) >= facetNames.length - 1) {
+    $('#next-button').css({ display : 'none' });
+  } else {
+    $('#next-button').css({ display : 'block' });
+  }
+  if (facetNames.indexOf(newPage) <= 0) {
+    $('#prev-button').css({ display : 'none' });
+  } else {
+    $('#prev-button').css({ display : 'block' });
+  }
+}
+
 Template.Landing_page.onCreated(function landingPageOnCreated() {
   initFacets();
   initSessionVars();
@@ -185,6 +223,10 @@ Template.Landing_page.helpers({
 
   getChartContent: function() {
     return chartContent;
+  },
+
+  getFacetWheel: function() {
+    return facetWheel;
   }
 });
 
@@ -194,24 +236,9 @@ Template.Landing_page.events({
     var idx = facetNames.indexOf(currPage);
     if (idx < facetNames.length - 1) {
       var nextPage = facetNames[idx + 1];
-      var nextPageContents = facetDetails[nextPage];
-      removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft')
-      removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
-      setTimeout(function() {
-        Session.set('currentPage', nextPage);
-        Session.set('facetContent', nextPageContents);
-        Session.set('facetTemplate', nextPageContents.template);
-        setTimeout(() => {
-          clearLoadedSessions();
-          removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft')
-          removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
-        }, 400);
-      }, 800);
+      switchPages(nextPage);
     }
     if (idx == 0) $('#prev-button').css({ display : 'block' });
-    if (idx + 1 >= facetNames.length - 1) {
-      $('#next-button').css({ display : 'none' });
-    }
   },
 
   'click #prev-button': function() {
@@ -219,24 +246,9 @@ Template.Landing_page.events({
     var idx = facetNames.indexOf(currPage);
     if (idx > 0) {
       var prevPage = facetNames[idx - 1];
-      var prevPageContents = facetDetails[prevPage];
-      removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
-      removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
-      setTimeout(function() {
-        Session.set('currentPage', prevPage);
-        Session.set('facetContent', prevPageContents);
-        Session.set('facetTemplate', prevPageContents.template);
-        setTimeout(() => {
-          clearLoadedSessions();
-          removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
-          removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
-        }, 300);
-      }, 750);
+      switchPages(prevPage);
     }
     if (idx == facetNames.length - 1) $('#next-button').css({ display : 'block' });
-    if (idx - 1 <= 0) {
-      $('#prev-button').css({ display : 'none' });
-    }
   },
 
   'click .main': function() {
@@ -262,6 +274,12 @@ Template.Landing_page.events({
 
   'click .resume-button': function() {
     window.open('/resumes/felixsu_resume_2017.pdf');
+  },
+
+  'click .ticker-icon': function(event, template) {
+    $('.ticker-icon').removeClass('ticker-selected');
+    event.currentTarget.classList.add('ticker-selected');
+    switchPages(this.template);
   }
 
 });

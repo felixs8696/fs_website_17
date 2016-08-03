@@ -163,14 +163,15 @@
   margin-left: 0.8em;
 }
 .project-header {
-  position: absolute;
-  top: 6em;
-  left: 3em;
-  width: calc(40% - 6em);
-  height: calc(100% - 8em);
+  position: relative;
+  width: 40%;
+  height: 100%;
+  float: left;
 }
 #project-header-content {
   position: relative;
+  top: 4em;
+  padding: 0 3em;
   height: calc(100vh - 14em);
 }
 .project-header-title {
@@ -199,10 +200,10 @@
   transform: translateX(-50%);
 }
 .nav-arrows {
-  width: 100%;
-
+  width: calc(100% - 6em);
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
+  left: 3em;
 }
 .left-arrow-container {
   float: left;
@@ -272,4 +273,26 @@
 }
 .main {
   overflow-y: scroll;
+}
+.ticker {
+  padding-top: 1em;
+  padding-right: 1em;
+  top: 0em;
+  position: absolute;
+  right: 0em;
+}
+.ticker-icon {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.ticker-selected {
+  opacity: .15;
 }

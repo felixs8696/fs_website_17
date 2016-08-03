@@ -108,6 +108,11 @@
             <img class="project-img" src="{{getFacetContentVal 'image'}}"/>
           </div>
         </div>
+        <div class="ticker">
+          {{#each getFacetWheel}}
+            {{> Ticker color=(color) font=(font) title=(title) icon=(icon) template=(template)}}
+          {{/each}}
+        </div>
         <div class="nav-arrows">
           <div class="left-arrow-container">
             <button id="prev-button">&lt; Prev</button>

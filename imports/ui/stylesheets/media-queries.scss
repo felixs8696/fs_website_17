@@ -176,6 +176,18 @@
   .project-img-container {
     display: none;
   }
+  #project-header-content {
+    top: 0;
+    padding: 0;
+  }
+  .nav-arrows {
+    left: 4em;
+  }
+  .ticker {
+    padding: 0;
+    top: 4em;
+    right: 4em;
+  }
 }
 @media screen and (min-aspect-ratio: 9/5) {
   .project-img-container {
@@ -393,7 +405,7 @@
     line-height: 30px;
   }
   .project-header {
-    padding: 2em;
+    padding: 2em 2em 1em 2em;
     height: 40vh;
   }
   .project-header-title {
@@ -416,5 +428,13 @@
   }
   .rect {
     height: 38px;
+  }
+  .nav-arrows {
+    left: 2em;
+    bottom: 1em;
+  }
+  .ticker {
+    top: 2em;
+    right: 2em;
   }
 }
