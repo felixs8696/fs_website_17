@@ -167,7 +167,7 @@
   top: 6em;
   left: 3em;
   width: calc(40% - 6em);
-  height: calc(100vh - 8em);
+  height: calc(100% - 8em);
 }
 #project-header-content {
   position: relative;
@@ -188,11 +188,7 @@
 }
 .project-img-container {
   width: 100%;
-  position: absolute;
-  left: 50%;
-  bottom: 4em;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  margin-top: 3em;
   padding: 1em;
 }
 .project-img {

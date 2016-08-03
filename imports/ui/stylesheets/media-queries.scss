@@ -177,8 +177,7 @@
     display: none;
   }
 }
-
-@media screen and (min-aspect-ratio: 15/9) {
+@media screen and (min-aspect-ratio: 9/5) {
   .project-img-container {
     display: none;
   }
