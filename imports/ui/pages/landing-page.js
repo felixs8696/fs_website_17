@@ -12,12 +12,12 @@ import '../components/ticker.js';
 import './landing-page.html';
 
 var facetWheel = [
-  {color: '#FFFFFF', icon: 'code', font: 'black', title: 'Hacker', template: 'hacker'},
-  {color: '#DDDDDD', icon: 'building-o', font: 'black', title: 'Worker', template: 'worker'},
-  {color: '#3CA55C', icon: 'bolt', font: 'white', title: 'Dynamo', template: 'dynamo'},
-  {color: '#416289', icon: 'book', font: 'white', title: 'Bookworm', template: 'bookworm'},
-  {color: '#103849', icon: 'picture-o', font: 'white', title: 'Photographer', template: 'photographer'},
-  {color: '#EBDAC0', icon: 'music', font: 'black', title: 'Musician', template: 'musician'}
+  {color: '#FFFFFF', icon: 'code', font: 'black', title: 'Hacker', template: 'hacker', selected: 'ticker-selected'},
+  {color: '#DDDDDD', icon: 'building-o', font: 'black', title: 'Worker', template: 'worker', selected: ''},
+  {color: '#3CA55C', icon: 'bolt', font: 'white', title: 'Dynamo', template: 'dynamo', selected: ''},
+  {color: '#416289', icon: 'book', font: 'white', title: 'Bookworm', template: 'bookworm', selected: ''},
+  {color: '#103849', icon: 'picture-o', font: 'white', title: 'Photographer', template: 'photographer', selected: ''},
+  {color: '#EBDAC0', icon: 'music', font: 'black', title: 'Musician', template: 'musician', selected: ''}
 ]
 
 var facetDetails = {
