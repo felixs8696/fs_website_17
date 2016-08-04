@@ -126,29 +126,16 @@
 
 		setTimeout(function() {
 			// expands the placeholder
-			dummy.style.WebkitTransform = 'translate3d(-5px, ' + (scrollY() - 5) + 'px, 0px)';
-			dummy.style.transform = 'translate3d(-5px, ' + (scrollY() - 5) + 'px, 0px)';
-			// disallow scroll
-			// window.addEventListener('scroll', noscroll);
+			dummy.style.WebkitTransform = 'translate3d(-5px, ' + (item.offsetTop - 5) + 'px, 0px)';
+			dummy.style.transform = 'translate3d(-5px, ' + (item.offsetTop - 5) + 'px, 0px)';
 		}, 25);
 
 		onEndTransition(dummy, function() {
-			// add transition class
 			classie.remove(dummy, 'placeholder--trans-in');
 			classie.add(dummy, 'placeholder--trans-out');
-			// // position the content container
-			// contentItemsContainer.style.top = '0px';
-			// // set white background for container
-			// contentItemsContainer.style.background = 'white';
-			// show the main content container
 			classie.add(contentItemsContainer, 'content--show');
-			// show content item:
 			classie.add(contentItems[current], 'content__item--show');
-			// show close control
 			classie.add(closeCtrl, 'close-button--show');
-			// sets overflow hidden to the body and allows the switch to the content scroll
-			// classie.addClass(bodyEl, 'noscroll');
-
 			isAnimating = false;
 		});
 	}
@@ -164,35 +151,19 @@
 		setTimeout(function() {
 			var dummy = gridItemsContainer.querySelector('.placeholder');
 
-			// classie.removeClass(bodyEl, 'noscroll');
-
 			dummy.style.WebkitTransform = 'translate3d(' + gridItem.offsetLeft + 'px, ' + gridItem.offsetTop + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
 			dummy.style.transform = 'translate3d(' + gridItem.offsetLeft + 'px, ' + gridItem.offsetTop + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
 
 			onEndTransition(dummy, function() {
-				// reset content scroll..
 				contentItem.parentNode.scrollTop = 0;
-				// console.log(dummy.parentNode);
-				// dummy.parentNode.removeChild(dummy);
-				dummy.remove();
+				gridItemsContainer.removeChild(dummy);
 				classie.remove(gridItem, 'grid__item--loading');
 				classie.remove(gridItem, 'grid__item--animate');
 				lockScroll = false;
-				// window.removeEventListener( 'scroll', noscroll );
 			});
 
-			// reset current
 			current = -1;
 		}, 25);
-	}
-
-	function noscroll() {
-		if(!lockScroll) {
-			lockScroll = true;
-			xscroll = scrollX();
-			yscroll = scrollY();
-		}
-		window.scrollTo(xscroll, yscroll);
 	}
 
 	init();
