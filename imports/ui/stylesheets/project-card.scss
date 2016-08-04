@@ -64,6 +64,7 @@ section {
   backface-visibility: hidden;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+  position: fixed;
 }
 
 .grid::after {
@@ -85,7 +86,6 @@ section {
 }
 
 .view-single .grid::after {
-  opacity: 1;
   -webkit-transform:translate3d(0,0,0);
   transform:translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
