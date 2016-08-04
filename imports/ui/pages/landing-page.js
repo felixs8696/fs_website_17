@@ -128,6 +128,7 @@ function removeAddClass(selector, removeClass, addClass) {
 function clearLoadedSessions() {
   Object.keys(Session.keys).forEach((key) => {
     if (key.includes("soundcloud:")) {
+      console.log("clearing soundcloud");
       Session.set(key, undefined);
     }
   });
@@ -145,6 +146,7 @@ function changeTicker(target) {
 }
 
 function switchPages(newPage) {
+  clearLoadedSessions();
   var newPageContents = facetDetails[newPage];
   removeAddClass('#project-header-content', 'animated fadeInLeft', 'animated fadeOutLeft');
   removeAddClass('#panel', 'animated fadeInRight', 'animated fadeOutRight');
@@ -153,7 +155,6 @@ function switchPages(newPage) {
     Session.set('facetContent', newPageContents);
     Session.set('facetTemplate', newPageContents.template);
     setTimeout(() => {
-      clearLoadedSessions();
       removeAddClass('#project-header-content', 'animated fadeOutLeft', 'animated fadeInLeft');
       removeAddClass('#panel', 'animated fadeOutRight', 'animated fadeInRight');
     }, 300);

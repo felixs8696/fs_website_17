@@ -12,10 +12,6 @@ Template.Musician_panel.onCreated(function musicianPanelOnCreated() {
 });
 
 Template.Musician_panel.onRendered(function() {
-  setTimeout(() => {
-    $('.youtube-gallery').addClass('animated fadeInUp');
-    $('.youtube-gallery').css({ opacity : 1 });
-  }, 1000);
   $('.youtube-gallery').each(function() { // the containers for all your galleries
     $(this).magnificPopup({
         delegate: 'a', // the selector for gallery item
@@ -41,25 +37,17 @@ Template.Musician_panel.onRendered(function() {
   });
   var SCPlaylistIds = Session.get('SCPlaylistIds');
   setTimeout(() => {
-    var i = 0;
-    var timer = setInterval(() => {
-      var SCPlaylistId = SCPlaylistIds[i];
+    SCPlaylistIds.forEach((SCPlaylistId, index, arr) => {
       Session.set("soundcloud:" + SCPlaylistId, getSoundCloud(SCPlaylistId));
-      i++;
-      if(i === SCPlaylistIds.length) {
-        clearInterval(timer);
-        setTimeout(() => {
-          $('.soundcloud-gallery').addClass('animated fadeInUp');
-          $('.soundcloud-gallery').css({ opacity : 1 });
-        }, 1000);
-      }
-    }, 500);
-  }, 1200);
+      console.log(Session.get("soundcloud:" + SCPlaylistId));
+    });
+  }, 2000);
 
 });
 
 Template.Musician_panel.helpers({
   getSCPlaylist: function(id) {
+    console.log(Session.get("soundcloud:" + id));
     return Session.get("soundcloud:" + id);
   }
 });

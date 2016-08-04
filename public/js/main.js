@@ -126,8 +126,8 @@
 
 		setTimeout(function() {
 			// expands the placeholder
-			dummy.style.WebkitTransform = 'translate3d(-5px, ' + (item.offsetTop - 5) + 'px, 0px)';
-			dummy.style.transform = 'translate3d(-5px, ' + (item.offsetTop - 5) + 'px, 0px)';
+			dummy.style.WebkitTransform = 'translate3d(-5px, ' + (gridItemsContainer.offsetTop - 5) + 'px, 0px)';
+			dummy.style.transform = 'translate3d(-5px, ' + (gridItemsContainer.offsetTop - 5) + 'px, 0px)';
 		}, 25);
 
 		onEndTransition(dummy, function() {
