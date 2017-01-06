@@ -1,7 +1,7 @@
 <template name="Worker_panel">
   <div class="panel-background worker-background">
     {{#each getWorkContents}}
-      <div class="row gallery-row animated fadeInUp _{{animInt}}">
+      <div class="row gallery-row animated fadeInUp _{{getAnimInt(@index)}}">
         {{> Job name=name logo=logo position=position date=date desc=desc}}
       </div>
     {{/each}}

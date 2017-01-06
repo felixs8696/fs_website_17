@@ -86,20 +86,22 @@ var chartXAxis = [
 var chartContent = [
   { title: 'Software Development',
     content: [
-      {type: 'Frontend', skill: 90},
-      {type: 'Web Design', skill: 90},
-      {type: 'Mobile Apps', skill: 80},
-      {type: 'Backend', skill: 70},
+      {type: 'Machine Learning', skill: 60},
+      {type: 'Artifical Intelligence', skill: 70},
+      {type: 'Algorithms', skill: 80},
+      {type: 'Web Design', skill: 80},
+      {type: 'Frontend', skill: 70},
       {type: 'UI/UX Design', skill: 70},
+      {type: 'Mobile Apps', skill: 60},
       {type: 'Database Management', skill: 60}
     ]
   },
   { title: 'Design',
     content: [
-      {type: 'Sketch3', skill: 90},
-      {type: 'Lightroom 5', skill: 80},
-      {type: 'After Effects / Premier Pro', skill: 70},
-      {type: 'Illustrator / Photoshop', skill: 50}
+      {type: 'Sketch3', skill: 80},
+      {type: 'After Effects / Premier Pro', skill: 80},
+      {type: 'Lightroom 5', skill: 70},
+      {type: 'Illustrator / Photoshop', skill: 60}
     ]
   },
 ]

@@ -13,6 +13,12 @@ var resourceContent = [
 
 var gitHubContent = [
   {
+    title: 'code-hub',
+    desc: 'Compilation of Coding Questions and Solutions',
+    lang: "Java / Python",
+    url: "https://github.com/felixs8696/code-hub"
+  },
+  {
     title: 'cs70-study-materials',
     desc: 'CS 70 Study Materials',
     lang: "TeX",

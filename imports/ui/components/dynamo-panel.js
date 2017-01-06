@@ -6,7 +6,7 @@ import "./dynamo-panel.html";
 const ANIM_OFFSET = 3;
 
 var organizations = [
-  {title: 'Launchpad | Founder' ,img: '/organizations/launchpad.png', style: 'rect', url: 'http://callaunchpad.org'},
+  {title: 'Launchpad | Co-President and Founder' ,img: '/organizations/launchpad.png', style: 'rect', url: 'http://callaunchpad.org'},
   {title: 'CalHacks 2.0 | Participant' ,img: '/organizations/calhacks.png', style: 'square', url: 'http://www.calhacks.io'},
   {title: 'Berkeley ABA | Media Technology Chair' ,img: '/organizations/aba.png', style: 'square', url: 'http://www.berkeleyaba.com'},
   {title: 'Cal Alumni Student Association | Web Content Coordinator' ,img: '/organizations/casa.png', style: 'square', url: 'http://alumni.berkeley.edu/community/student-programs/cal-alumni-student-association'},
