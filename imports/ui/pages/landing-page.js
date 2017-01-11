@@ -88,8 +88,7 @@ var chartContent = [
     content: [
       {type: 'Machine Learning', skill: 60},
       {type: 'Artifical Intelligence', skill: 70},
-      {type: 'Web Design', skill: 80},
-      {type: 'UI/UX', skill: 70},
+      {type: 'Web Design / UI/UX', skill: 80},
       {type: 'Mobile Apps', skill: 60},
       {type: 'Database Management', skill: 50}
     ]
