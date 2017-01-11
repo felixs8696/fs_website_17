@@ -61,7 +61,7 @@ var facetDetails = {
 
 var skillsContent = [
   {title: 'Languages', list: 'JavaScript, HTML/CSS, Java, Python, C, R, Bash, LaTeX, XML'},
-  {title: 'Frameworks', list: 'Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
+  {title: 'Frameworks', list: 'TensorFlow, OpenCV, Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
   {title: 'Services', list: 'MongoDB, Firebase, Heroku, SendGrid, Git'},
   {title: 'APIs', list: 'Google (Maps, Search, Autocomplete), Postmates, Stripe, Ace, Filestack'}
 ]
@@ -88,22 +88,25 @@ var chartContent = [
     content: [
       {type: 'Machine Learning', skill: 60},
       {type: 'Artifical Intelligence', skill: 70},
-      {type: 'Algorithms', skill: 80},
       {type: 'Web Design', skill: 80},
-      {type: 'Frontend', skill: 70},
-      {type: 'UI/UX Design', skill: 70},
+      {type: 'UI/UX', skill: 70},
       {type: 'Mobile Apps', skill: 60},
-      {type: 'Database Management', skill: 60}
+      {type: 'Database Management', skill: 50}
     ]
   },
   { title: 'Design',
     content: [
-      {type: 'Sketch3', skill: 80},
       {type: 'After Effects / Premier Pro', skill: 80},
-      {type: 'Lightroom 5', skill: 70},
-      {type: 'Illustrator / Photoshop', skill: 60}
+      {type: 'Illustrator / Photoshop/ Lightroom', skill: 70}
     ]
   },
+  { title: 'Hobbies',
+    content: [
+      {type: 'Basketball', skill: 70},
+      {type: 'Tennis', skill: 70},
+      {type: 'Guitar', skill: 50}
+    ]
+  }
 ]
 
 var facetNames = Object.keys(facetDetails);
