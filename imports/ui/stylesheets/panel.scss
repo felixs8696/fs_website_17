@@ -9,3 +9,14 @@
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
+iframe {
+  width: 90%;
+  height: 300px;
+}
+
+@media screen and (max-width: 650px) {
+  iframe {
+    height: 250px;
+  }
+}

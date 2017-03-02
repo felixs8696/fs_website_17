@@ -481,7 +481,7 @@ section {
 .content__item p {
   max-width: 1200px;
   margin: 1em auto;
-  text-align: justify;
+  // text-align: justify;
 }
 .content__item p:first-of-type {
   font-weight: 400;
@@ -824,7 +824,7 @@ section {
   }
 }
 article p {
-  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif !important;
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
 }
 strong {
