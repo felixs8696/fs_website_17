@@ -18,6 +18,10 @@
     float: none;
     display: inline-block;
   }
+  .signature {
+    font-size: 3em;
+    left: 60%;
+  }
 }
 @media screen and (max-width: 1053px) {
   .parallax-about-section p {
@@ -72,6 +76,13 @@
   }
   .skills-list {
     display: block;
+  }
+  .dear-title {
+    font-size: 5em;
+  }
+  .signature {
+    font-size: 2.5em;
+    left: 55%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -298,6 +309,16 @@
     line-height: 34px;
     font-size: 10px;
   }
+  .dear-title {
+    font-size: 4em;
+  }
+  .cover-photo {
+    background-position: center;
+  }
+  .signature {
+    font-size: 2em;
+    position: initial;
+  }
 }
 @media screen and (max-width : 550px) {
   #project-header-content {
@@ -436,5 +457,15 @@
   .ticker {
     top: 5px;
     right: 10px;
+  }
+  .dear-title {
+    font-size: 3em;
+  }
+  .letter {
+    padding: 20px;
+  }
+  .signature {
+    font-size: 2em;
+    position: initial;
   }
 }

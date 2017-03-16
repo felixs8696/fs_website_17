@@ -1,5 +1,5 @@
 .cover-photo {
-  height: 350px;
+  height: 400px;
   background: url('/gift/me_and_dad.jpg');
   background-position: 50% calc(50% + 5em);
   background-size: cover;
@@ -41,5 +41,15 @@
 .letter {
   background-color: white;
   padding: 30px;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.signature {
+  font-size: 3em;
+  position: absolute;
+  left: 65%;
 }
