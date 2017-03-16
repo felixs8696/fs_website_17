@@ -244,6 +244,11 @@ Template.Landing_page.helpers({
 });
 
 Template.Landing_page.events({
+  'click #birthday-button': function() {
+    // Dad's BDay Site
+    FlowRouter.go("/happy_birthday_dad");
+  },
+
   'click #next-button': function() {
     var currPage = Session.get('currentPage');
     var idx = facetNames.indexOf(currPage);
