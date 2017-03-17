@@ -3,7 +3,7 @@ import { Template } from 'meteor/templating';
 import "./bookworm-panel.html";
 
 var resourceContent = [
-  {title: '[ABA] Bus Tech Workshop', desc: 'What is business technology and how can you contribute?', url: 'workshops/slides-bus-tech.html'},
+  {title: '[ABA] Bus Tech Workshop', desc: 'What is business technology and how can you contribute?', url: 'workshops/aba-bus-tech.html'},
   {title: '[ABA] Professional Workshop', desc: 'Rethink Your Future - What are your priorities?', url: 'http://felixs8696.github.io/external/abaworkshop.html#/'},
   {title: '[ABA] Startup Workshop', desc: 'Define Your Role and Scale Effectively', url: 'http://felixs8696.github.io/external/startupworkshop.html#/'},
   {title: 'Intro to R (Data Computing)', desc: 'Use Code to Boost your Presentations', url: 'http://felixs8696.github.io/external/abarslides.html#1'},
