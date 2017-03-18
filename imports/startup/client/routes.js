@@ -13,13 +13,6 @@ FlowRouter.route('/', {
   }
 });
 
-FlowRouter.route('/happy_birthday_dad', {
-  name: 'App.dad',
-  action() {
-    BlazeLayout.render('Dear_Dad');
-  }
-});
-
 FlowRouter.notFound = {
   action() {
     FlowRouter.go('App.landing');
