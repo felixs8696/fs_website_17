@@ -8,15 +8,18 @@ import "./job.js";
 const ANIM_OFFSET = 3;
 
 var workContents = [
-  // {
-  //   name: "Amazon",
-  //   logo: "/companies/amazon.png",
-  //   position: "Software Development Engineer Intern",
-  //   date: "May 2017 - Aug 2017",
-  //   desc: [
-  //     {content: "Worked on the _____ team"}
-  //   ]
-  // },
+  {
+    name: "Amazon",
+    logo: "/companies/amazon.png",
+    position: "Robotics Software Development Engineer Intern",
+    date: "May 2017 - Aug 2017",
+    desc: [
+      {content: "Implemented a Natural Evolution Strategy algorithm to train neural networks in parameter space"},
+      {content: "Compared performance against Trust Region Policy Optimization in a robotics simulator"},
+      {content: "Built a crash resistant training system using file backups to guarantee setbacks of only 1 iteration"},
+      {content: "Parallelized training on a distributed EC2 system by broadcasting algorithm rewards using MPI"}
+    ]
+  },
   {
     name: "Hack In",
     logo: "/companies/hackin.png",
@@ -26,8 +29,7 @@ var workContents = [
       {content: "Created a customized technical assessment platform to vet software engineer recruits and freelancers"},
       {content: "Separated collections stored in MongoDB to leverage relational and document style advantages"},
       {content: "Wrote 5000 lines of code in 3 weeks with the CTO to ensure all features were operational in our BETA release"},
-      {content: "Implemented ACE editor API to receive code and Filestack API to store documents as urls in the database"},
-      {content: "Temporarily using email to store redundant data of applicant submissions in the company account"},
+      {content: "Temporarily used email to store redundant data of applicant submissions in the company account"},
     ]
   },{
     name: "AKALA",
