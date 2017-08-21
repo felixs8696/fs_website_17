@@ -60,9 +60,9 @@ var facetDetails = {
 };
 
 var skillsContent = [
-  {title: 'Languages', list: 'JavaScript, HTML/CSS, Java, Python, C, R, Bash, LaTeX, XML'},
-  {title: 'Frameworks', list: 'TensorFlow, OpenCV, Meteor, Angular, Blaze, Ionic, Bootstrap, Skeleton, NumPy, NodeJS'},
-  {title: 'Services', list: 'MongoDB, Firebase, Heroku, SendGrid, Git'},
+  {title: 'Languages', list: 'Python, Java, C, Bash, JavaScript, HTML/CSS, R, LaTeX, XML'},
+  {title: 'Frameworks', list: 'TensorFlow, NumPy, MXNet, Kaldi, OpenCV, Meteor, Angular, Blaze, Ionic, NodeJS'},
+  {title: 'Services', list: 'V-REP, MongoDB, Firebase, Heroku, SendGrid, Git'},
   {title: 'APIs', list: 'Google (Maps, Search, Autocomplete), Postmates, Stripe, Ace, Filestack'}
 ]
 
