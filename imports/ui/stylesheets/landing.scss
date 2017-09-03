@@ -125,7 +125,7 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
 }
 .profile-photo {
-  background: url("/linkedin_2.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)), url("/badge.png");
   background-size: cover;
   background-position: center center;
   position: relative;
