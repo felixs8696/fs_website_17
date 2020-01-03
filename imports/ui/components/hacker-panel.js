@@ -4,6 +4,10 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import "./hacker-panel.html";
 
 var hackerContent = [
+	{ title: 'MOR', founders: 'Launchpad team led by Felix Su', logo: '/projects/mor-logo.jpeg', desc: 'A multi-objective reinforcment learning solution for complex problems.', date: 'May 2018', time: '1 min read', url: 'https://github.com/callaunchpad/MOR', urlTitle: 'Source Code', linkIcon: 'github', 
+	content: "" +
+	"<p>Many real-world problems have conflicting objectives, however, it is difficult to design a single reward function that optimally combines all objectives. To address this, we will simultaneously and independently optimize all solutions on the Pareto front. This project will investigate how to implement and improve the existing MO-CMA-ES algorithm to operate a Baxter robot quickly and adaptively in production for a multi-objective problem such as collision avoidance.</p>"
+	},
   { title:'Stella', founders: 'Open Source Project by Felix Su built for Launchpad', logo: '/projects/stella-logo.png', desc: 'An AI bot that supports hands-free web browsing.', date: 'Jan 2017', time: '2 min read', url: 'https://github.com/callaunchpad/Stella', urlTitle: 'Source Code', linkIcon: 'github',
     content: "" +
     "<p>Stella is a Chrome Extension that creates a touchless web browsing experience. It has an Artificially Intelligent interface that uses speech recognition and natural language processing to analyze spoken commands. As of the January 2017, Stella is in her BETA phase and uses a combination of Chrome extension and speech recognition APIs to operate.</p>" +
